@@ -18,6 +18,7 @@ import com.openjlpt.app.ui.mock.MockIntroScreen
 import com.openjlpt.app.ui.practice.PracticeSetupScreen
 import com.openjlpt.app.ui.quiz.QuizScreen
 import com.openjlpt.app.ui.result.ResultScreen
+import com.openjlpt.app.ui.settings.SettingsScreen
 import com.openjlpt.core.model.JlptLevel
 import com.openjlpt.core.model.QuestionType
 import com.openjlpt.core.model.Section
@@ -30,6 +31,7 @@ object Routes {
     const val QUIZ = "quiz/{mode}/{level}?section={section}&type={type}&count={count}"
     const val RESULT = "result/{attemptId}"
     const val HISTORY = "history/{level}"
+    const val SETTINGS = "settings"
 
     fun practice(level: JlptLevel, section: Section) = "practice/${level.name}/${section.name}"
     fun mockIntro(level: JlptLevel) = "mock/${level.name}"
@@ -55,7 +57,11 @@ fun AppNavHost(container: AppContainer) {
                 onMock = { level -> nav.navigate(Routes.mockIntro(level)) },
                 onReview = { level -> nav.navigate(Routes.quiz(TestMode.REVIEW, level)) },
                 onHistory = { level -> nav.navigate(Routes.history(level)) },
+                onSettings = { nav.navigate(Routes.SETTINGS) },
             )
+        }
+        composable(Routes.SETTINGS) {
+            SettingsScreen(container = container, onBack = { nav.popBackStack() })
         }
         composable(
             Routes.PRACTICE,

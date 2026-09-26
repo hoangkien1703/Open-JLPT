@@ -5,6 +5,7 @@ import com.openjlpt.core.model.Passage
 import com.openjlpt.core.model.Question
 import com.openjlpt.core.model.QuestionBank
 import com.openjlpt.core.model.QuestionType
+import com.openjlpt.core.model.ScriptLine
 import com.openjlpt.core.model.Section
 import com.openjlpt.core.session.SessionBuilder
 import org.junit.Assert.assertEquals
@@ -34,6 +35,21 @@ class SessionBuilderTest {
         for (sq in session.questions) {
             assertEquals(sq.question.choices[sq.question.answer], sq.displayedChoices[sq.correctDisplayedIndex])
             assertEquals(sq.question.answer, sq.originalIndex(sq.correctDisplayedIndex))
+        }
+    }
+
+    @Test
+    fun audioOnlyChoicesKeepTheirRecordedOrder() {
+        val listening = QuestionBank(
+            JlptLevel.N5, emptyList(),
+            (1..5).map {
+                Question("qr$it", QuestionType.QUICK_RESPONSE, "", listOf("a", "b", "c"), 1, "e", script = listOf(ScriptLine("M", "x")))
+            },
+        )
+        repeat(10) { seed ->
+            SessionBuilder.practice(listening, Section.LISTENING, null, 5, Random(seed)).questions.forEach {
+                assertEquals(listOf(0, 1, 2), it.choiceOrder)
+            }
         }
     }
 

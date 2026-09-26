@@ -84,7 +84,7 @@ fun MockIntroScreen(container: AppContainer, level: JlptLevel, onBack: () -> Uni
             }
             Text(
                 "Each paper has its own timer, like the real test. When time runs out the test moves to the next paper. " +
-                    "Unanswered questions count as wrong. Listening questions are read aloud by your phone's Japanese voice. " +
+                    "Unanswered questions count as wrong. Tap Play on each listening question to hear it. " +
                     "Scores are an estimate of the official scaled score.",
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,

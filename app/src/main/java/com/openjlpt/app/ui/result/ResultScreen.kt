@@ -41,7 +41,15 @@ import com.openjlpt.app.ui.quiz.ChoiceRow
 import com.openjlpt.app.ui.quiz.ChoiceState
 import com.openjlpt.app.ui.quiz.ExplanationCard
 import com.openjlpt.app.ui.quiz.PassageCard
-import com.openjlpt.app.ui.quiz.Transcript
+import com.openjlpt.app.ui.quiz.ListeningCard
+import com.openjlpt.app.audio.ListeningPlayer
+import com.openjlpt.app.ui.components.LocalWordTapEnabled
+import com.openjlpt.app.ui.components.WordLookupHost
+import com.openjlpt.core.model.JlptLevel
+import com.openjlpt.core.session.SessionQuestion
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.ui.platform.LocalContext
 import com.openjlpt.app.ui.theme.CorrectGreen
 import com.openjlpt.app.ui.theme.WrongRed
 import com.openjlpt.core.model.Section
@@ -54,7 +62,13 @@ fun ResultScreen(container: AppContainer, attemptId: Long, onBack: () -> Unit) {
     val state by vm.state.collectAsStateWithLifecycle()
     var onlyWrong by rememberSaveable { mutableStateOf(false) }
     var expanded by remember { mutableStateOf(setOf<String>()) }
+    val context = LocalContext.current
+    val player = remember { ListeningPlayer(context, container.settings.settings) }
+    DisposableEffect(player) { onDispose { player.shutdown() } }
+    val level = state.attempt?.level?.let { runCatching { JlptLevel.valueOf(it) }.getOrNull() }
 
+    // Every question here has been answered, so words can be tapped whenever the feature is on.
+    WordLookupHost(container, level, player) {
     Scaffold(topBar = { BackTopBar("Results", onBack) }) { padding ->
         val attempt = state.attempt
         if (state.loading) {
@@ -90,11 +104,12 @@ fun ResultScreen(container: AppContainer, attemptId: Long, onBack: () -> Unit) {
             }
             items(shown, key = { it.question.id }) { item ->
                 val open = item.question.id in expanded
-                ReviewCard(item, open) {
+                ReviewCard(item, open, player) {
                     expanded = if (open) expanded - item.question.id else expanded + item.question.id
                 }
             }
         }
+    }
     }
 }
 
@@ -169,7 +184,7 @@ private fun PracticeSummary(attempt: AttemptEntity) {
 }
 
 @Composable
-private fun ReviewCard(item: ReviewItem, open: Boolean, onToggle: () -> Unit) {
+private fun ReviewCard(item: ReviewItem, open: Boolean, player: ListeningPlayer, onToggle: () -> Unit) {
     val q = item.question
     Card(modifier = Modifier.fillMaxWidth()) {
         Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -194,11 +209,11 @@ private fun ReviewCard(item: ReviewItem, open: Boolean, onToggle: () -> Unit) {
                     )
                 }
             }
-            if (open) {
+            if (open) CompositionLocalProvider(LocalWordTapEnabled provides true) {
                 item.passage?.let { PassageCard(it) }
                 if (q.section == Section.LISTENING) {
-                    q.situation?.let { Text(it, style = MaterialTheme.typography.bodyMedium) }
-                    Transcript(q)
+                    val session = remember(q.id) { SessionQuestion(q, item.passage, q.choices.indices.toList()) }
+                    ListeningCard(session, player, showTranscript = true, allowTranscript = true)
                 }
                 if (q.prompt.isNotBlank()) RichText(q.prompt, style = MaterialTheme.typography.titleSmall)
                 q.choices.forEachIndexed { i, choice ->

@@ -42,6 +42,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -62,6 +63,9 @@ import com.openjlpt.app.audio.ListeningPlayer
 import com.openjlpt.app.data.AppContainer
 import com.openjlpt.app.ui.appViewModel
 import com.openjlpt.app.ui.components.LoadingBox
+import com.openjlpt.app.ui.components.LocalWordLookup
+import com.openjlpt.app.ui.components.LocalWordTapEnabled
+import com.openjlpt.app.ui.components.WordLookupHost
 import com.openjlpt.app.ui.components.RichText
 import com.openjlpt.app.ui.theme.CorrectGreen
 import com.openjlpt.app.ui.theme.CorrectGreenContainer
@@ -74,8 +78,9 @@ import com.openjlpt.core.session.SessionQuestion
 fun QuizScreen(container: AppContainer, onExit: () -> Unit, onFinished: (Long) -> Unit) {
     val vm = appViewModel { QuizViewModel(createSavedStateHandle(), container) }
     val state by vm.state.collectAsStateWithLifecycle()
+    val settings by container.settings.settings.collectAsStateWithLifecycle()
     val context = LocalContext.current
-    val player = remember { ListeningPlayer(context) }
+    val player = remember { ListeningPlayer(context, container.settings.settings) }
     DisposableEffect(player) { onDispose { player.shutdown() } }
 
     var confirmExit by remember { mutableStateOf(false) }
@@ -83,8 +88,17 @@ fun QuizScreen(container: AppContainer, onExit: () -> Unit, onFinished: (Long) -
     var showNavigator by remember { mutableStateOf(false) }
 
     LaunchedEffect(state.savedAttemptId) { state.savedAttemptId?.let(onFinished) }
-    // Stop any audio when moving to another question.
-    LaunchedEffect(state.partIndex, state.index) { player.stop() }
+    // Stop any audio when moving to another question, then optionally start the next track.
+    val currentId = state.current?.question?.id
+    LaunchedEffect(state.partIndex, state.index, state.awaitingPartStart, currentId) {
+        player.stop()
+        val current = state.current
+        if (settings.autoPlayListening && !state.awaitingPartStart && current != null &&
+            current.question.section == Section.LISTENING && player.canPlay(current)
+        ) {
+            player.play(current)
+        }
+    }
 
     val requestExit: () -> Unit = {
         if (state.answeredCount > 0 && state.savedAttemptId == null) {
@@ -132,27 +146,40 @@ fun QuizScreen(container: AppContainer, onExit: () -> Unit, onFinished: (Long) -
         },
     ) { padding ->
         val current = state.current
-        when {
-            state.loading -> LoadingBox(Modifier.padding(padding))
-            state.session?.questions.isNullOrEmpty() -> EmptyState(Modifier.padding(padding), onExit)
-            state.awaitingPartStart -> PartIntro(state, vm::startPart, Modifier.padding(padding))
-            current != null -> Column(Modifier.padding(padding)) {
-                val size = state.part?.questions?.size ?: 1
-                LinearProgressIndicator(
-                    progress = { (state.index + 1f) / size },
-                    modifier = Modifier.fillMaxWidth(),
-                )
-                QuestionView(
-                    question = current,
-                    number = state.index + 1,
-                    total = size,
-                    selected = state.selections[current.question.id],
-                    revealed = !state.isMock && current.question.id in state.checked,
-                    allowTranscript = !state.isMock,
-                    player = player,
-                    onSelect = vm::select,
-                    modifier = Modifier.weight(1f),
-                )
+        WordLookupHost(container, state.session?.level, player) {
+            when {
+                state.loading -> LoadingBox(Modifier.padding(padding))
+                state.session?.questions.isNullOrEmpty() -> EmptyState(Modifier.padding(padding), onExit)
+                state.awaitingPartStart -> PartIntro(state, vm::startPart, Modifier.padding(padding))
+                current != null -> Column(Modifier.padding(padding)) {
+                    val size = state.part?.questions?.size ?: 1
+                    LinearProgressIndicator(
+                        progress = { (state.index + 1f) / size },
+                        modifier = Modifier.fillMaxWidth(),
+                    )
+                    val selected = state.selections[current.question.id]
+                    val revealed = !state.isMock && current.question.id in state.checked
+                    // Tapping words gives hints, so by default it waits until the question is
+                    // answered, and stays off during mock tests like the real exam.
+                    val answered = if (state.isMock) selected != null else revealed
+                    val tapWords = settings.tapWords &&
+                        (!state.isMock || settings.tapWordsInMock) &&
+                        (answered || settings.tapWordsBeforeAnswer)
+                    CompositionLocalProvider(LocalWordTapEnabled provides tapWords) {
+                        QuestionView(
+                            question = current,
+                            number = state.index + 1,
+                            total = size,
+                            selected = selected,
+                            revealed = revealed,
+                            allowTranscript = !state.isMock,
+                            showTapHint = tapWords && LocalWordLookup.current != null,
+                            player = player,
+                            onSelect = vm::select,
+                            modifier = Modifier.weight(1f),
+                        )
+                    }
+                }
             }
         }
     }
@@ -310,7 +337,7 @@ private fun PartIntro(state: QuizUiState, onStart: () -> Unit, modifier: Modifie
         if (first?.section == Section.LISTENING) {
             Spacer(Modifier.height(12.dp))
             Text(
-                "Turn up your volume. Each question is read aloud by your phone's Japanese voice; tap Play to hear it.",
+                "Turn up your volume. Tap Play on each question to hear the conversation.",
                 textAlign = TextAlign.Center,
                 style = MaterialTheme.typography.bodyMedium,
             )
@@ -345,6 +372,7 @@ private fun QuestionView(
     selected: Int?,
     revealed: Boolean,
     allowTranscript: Boolean,
+    showTapHint: Boolean,
     player: ListeningPlayer,
     onSelect: (Int) -> Unit,
     modifier: Modifier = Modifier,
@@ -363,6 +391,13 @@ private fun QuestionView(
             Text("${q.type.japanese} · ${q.type.english}", style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary)
         }
         Text(q.type.instruction, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        if (showTapHint) {
+            Text(
+                "Tap a Japanese word to hear it and see its meaning.",
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.primary,
+            )
+        }
 
         question.passage?.let { PassageCard(it) }
 

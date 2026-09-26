@@ -90,7 +90,9 @@ object SessionBuilder {
     private fun toSession(bank: QuestionBank, question: Question, random: Random) = SessionQuestion(
         question = question,
         passage = bank.passageFor(question),
-        choiceOrder = question.choices.indices.shuffled(random),
+        // Choices that exist only as audio are read in a fixed order by the recorded audio.
+        choiceOrder = if (question.type.choicesAudioOnly) question.choices.indices.toList()
+        else question.choices.indices.shuffled(random),
     )
 
     /**
