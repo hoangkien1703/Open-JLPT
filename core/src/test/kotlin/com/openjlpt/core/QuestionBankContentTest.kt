@@ -17,16 +17,13 @@ class QuestionBankContentTest {
 
     private val root = File(System.getProperty("questionsDir") ?: "../app/src/main/assets/questions")
 
-    /** Levels whose banks must hold enough questions for a full mock test. */
-    private val completeLevels = setOf(JlptLevel.N5, JlptLevel.N4, JlptLevel.N3, JlptLevel.N2)
-
     private val banks: Map<JlptLevel, QuestionBank> by lazy {
-        JlptLevel.entries.mapNotNull { level ->
+        JlptLevel.entries.associateWith { level ->
             val dir = File(root, level.label.lowercase())
             val files = dir.listFiles { f -> f.extension == "json" }?.sortedBy { it.name }.orEmpty()
-            if (level in completeLevels) assertTrue("No bank files in $dir", files.isNotEmpty())
-            if (files.isEmpty()) null else level to QuestionBankParser.parseLevel(level, files.map { it.readText() })
-        }.toMap()
+            assertTrue("No bank files in $dir", files.isNotEmpty())
+            QuestionBankParser.parseLevel(level, files.map { it.readText() })
+        }
     }
 
     private val passageTypes = setOf(
@@ -80,7 +77,7 @@ class QuestionBankContentTest {
     fun everyLevelCanBuildAFullMockTest() {
         val report = StringBuilder()
         var missing = false
-        for ((level, bank) in banks.filterKeys { it in completeLevels }) {
+        for ((level, bank) in banks) {
             val format = JlptFormat.forLevel(level)
             for (part in format.parts) for ((type, needed) in part.items) {
                 val have = bank.byType(type).size
