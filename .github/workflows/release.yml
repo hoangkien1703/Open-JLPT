@@ -97,4 +97,7 @@ jobs:
 
       - name: Explain a skipped release
         if: steps.plan.outputs.needed != 'true'
-        run: echo "No release: ${{ steps.plan.outputs.reason }}" >> "$GITHUB_STEP_SUMMARY"
+        env:
+          REASON: ${{ steps.plan.outputs.reason }}
+        run: |
+          echo "No release: $REASON" >> "$GITHUB_STEP_SUMMARY"
