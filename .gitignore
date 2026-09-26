@@ -11,3 +11,5 @@ build/
 *.aab
 *.keystore
 !debug.keystore
+/app/generated-assets/
+__pycache__/

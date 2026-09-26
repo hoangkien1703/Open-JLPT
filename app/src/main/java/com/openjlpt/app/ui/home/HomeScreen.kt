@@ -16,11 +16,13 @@ import androidx.compose.foundation.horizontalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -49,6 +51,7 @@ fun HomeScreen(
     onMock: (JlptLevel) -> Unit,
     onReview: (JlptLevel) -> Unit,
     onHistory: (JlptLevel) -> Unit,
+    onSettings: () -> Unit,
 ) {
     val vm = appViewModel { HomeViewModel(container) }
     val state by vm.state.collectAsStateWithLifecycle()
@@ -59,9 +62,13 @@ fun HomeScreen(
         topBar = {
             TopAppBar(
                 title = { Text("Open JLPT", fontWeight = FontWeight.Bold) },
+                actions = {
+                    IconButton(onClick = onSettings) { Icon(Icons.Filled.Settings, contentDescription = "Settings") }
+                },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primary,
                     titleContentColor = MaterialTheme.colorScheme.onPrimary,
+                    actionIconContentColor = MaterialTheme.colorScheme.onPrimary,
                 ),
             )
         },

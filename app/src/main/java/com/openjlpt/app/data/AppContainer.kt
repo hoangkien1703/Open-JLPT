@@ -9,4 +9,5 @@ class AppContainer(context: Context) {
     val questions = QuestionRepository(context.assets)
     val history = HistoryRepository(database.historyDao())
     val settings = SettingsStore(context)
+    val glossary = GlossaryRepository(context.assets)
 }

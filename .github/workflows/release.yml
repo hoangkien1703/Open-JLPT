@@ -4,50 +4,97 @@ on:
   push:
     branches: [ "main" ]
   workflow_dispatch:
+    inputs:
+      bump:
+        description: Release now with this bump (patch, minor, major) or an exact X.Y.Z
+        required: true
+        default: patch
+
+permissions:
+  contents: read
 
 concurrency:
   group: release
   cancel-in-progress: false
 
-permissions:
-  contents: write
-
 jobs:
   release:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
-    env:
-      VERSION_CODE: ${{ github.run_number }}
-      VERSION_NAME: 0.1.${{ github.run_number }}
+    timeout-minutes: 40
+    permissions:
+      contents: write
+      pull-requests: read
+      issues: write # creates the release:* labels on first use
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Make sure the release labels exist
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          existing="$(gh label list --limit 200 --json name --jq '.[].name')"
+          for mode in patch minor major skip; do
+            grep -Fxq "release:$mode" <<< "$existing" || \
+              gh label create "release:$mode" --color 1D76DB --description "Release automation: $mode"
+          done
+
+      - name: Decide whether this merge needs a release
+        id: plan
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FORCE_BUMP: ${{ inputs.bump }}
+        run: python3 tools/release_plan.py
 
       - uses: actions/setup-java@v4
+        if: steps.plan.outputs.needed == 'true'
         with:
           distribution: temurin
           java-version: 17
 
       - uses: gradle/actions/setup-gradle@v4
+        if: steps.plan.outputs.needed == 'true'
 
       - name: Test the engine and validate the question banks
+        if: steps.plan.outputs.needed == 'true'
         run: ./gradlew :core:test --stacktrace
 
+      - name: Build audio and glossary
+        if: steps.plan.outputs.needed == 'true'
+        uses: ./.github/actions/build-assets
+
       - name: Build the release APK
+        if: steps.plan.outputs.needed == 'true'
+        env:
+          VERSION_CODE: ${{ steps.plan.outputs.version_code }}
+          VERSION_NAME: ${{ steps.plan.outputs.version }}
         run: |
+          set -euo pipefail
           ./gradlew :app:assembleRelease --stacktrace
           cp app/build/outputs/apk/release/app-release.apk open-jlpt.apk
+          sha256sum open-jlpt.apk > open-jlpt.apk.sha256
+          cat open-jlpt.apk.sha256
 
       - name: Publish the GitHub Release
+        if: steps.plan.outputs.needed == 'true'
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v${{ env.VERSION_NAME }}
+          tag_name: v${{ steps.plan.outputs.version }}
           target_commitish: ${{ github.sha }}
-          name: Open JLPT ${{ env.VERSION_NAME }}
+          name: Open JLPT ${{ steps.plan.outputs.version }}
+          generate_release_notes: true
           body: |
             Download **open-jlpt.apk** below and open it on your Android phone (Android 8.0 or newer).
             If Android asks, allow installing apps from your browser. A new version installs over the old one and keeps your history.
-
-            Built from ${{ github.sha }}.
-          files: open-jlpt.apk
+          files: |
+            open-jlpt.apk
+            open-jlpt.apk.sha256
           make_latest: true
           fail_on_unmatched_files: true
+
+      - name: Explain a skipped release
+        if: steps.plan.outputs.needed != 'true'
+        run: echo "No release: ${{ steps.plan.outputs.reason }}" >> "$GITHUB_STEP_SUMMARY"

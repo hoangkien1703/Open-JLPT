@@ -1,0 +1,32 @@
+name: Build audio and glossary
+description: >-
+  Generates the built-in listening audio, word pronunciations and word glossary into
+  app/generated-assets with tools/build_assets.py. Output is cached, so only new or changed
+  questions are synthesized.
+
+runs:
+  using: composite
+  steps:
+    - name: Install Open JTalk and ffmpeg
+      shell: bash
+      run: |
+        sudo apt-get update -q
+        sudo apt-get install -y -q --no-install-recommends \
+          open-jtalk open-jtalk-mecab-naist-jdic hts-voice-nitech-jp-atr503-m001 ffmpeg
+
+    - name: Install the word splitter
+      shell: bash
+      run: python3 -m pip install --quiet sudachipy sudachidict_core
+
+    - name: Restore generated assets
+      uses: actions/cache@v4
+      with:
+        path: |
+          app/generated-assets
+          ~/.cache/open-jlpt
+        key: jlpt-assets-${{ hashFiles('app/src/main/assets/questions/**', 'tools/build_assets.py', 'tools/voices/**') }}
+        restore-keys: jlpt-assets-
+
+    - name: Generate audio and glossary
+      shell: bash
+      run: python3 tools/build_assets.py

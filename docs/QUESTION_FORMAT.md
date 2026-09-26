@@ -73,3 +73,7 @@ The official number of questions per type for each level's mock test is defined 
 - Each question must have exactly one defensible answer. For sentence-order questions, check that the
   fragments can only be arranged one way.
 - Run `./gradlew :core:test` before sending a change; it validates every bank.
+- Listening audio and the tap-a-word glossary are generated from the banks by
+  `tools/build_assets.py`, so an edited question gets new audio automatically in CI. The recording
+  follows the same order as the app: situation, question (課題理解 and ポイント理解 only), script,
+  question again, then the numbered choices for 概要理解, 発話表現 and 即時応答.
