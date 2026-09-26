@@ -1,0 +1,316 @@
+{
+  "level": "N2",
+  "passages": [
+    {
+      "id": "n2-tg-p1",
+      "title": "「待つ」ことの 価値",
+      "text": "現代社会では、何でも すぐに 手に 入る ように なった。インターネットで 注文すれば 翌日には 商品が 届き、知りたい ことは 検索すれば すぐに わかる。本当に 便利に なった。（１）、わたしたちは 待つ ことが 苦手に なって きたのでは ないだろうか。\n先日、電車が 五分 遅れた だけで、駅員に 強く 文句を 言って いる 人を 見かけた。（２） 気持ちも わからなくは ないが、五分 待つ ことが それほど 大きな 問題だろうか。\n考えて みれば、待つ 時間には 意味が ある。手紙の 返事を 待つ 間に 相手の ことを 思ったり、料理が できるのを 待ちながら 期待を ふくらませたり する。待つ 時間が ある （３）、手に 入れた ときの 喜びも 大きく なるのだ。\nもちろん、便利さを 否定する つもりは ない。（４）、たまには 立ち止まって、待つ 時間を 楽しんで みては どうだろうか。そう すれば、毎日の 生活が 少し （５） かもしれない。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "n2-gf-001",
+      "type": "GRAMMAR_FORM",
+      "prompt": "彼は 医者の 忠告にも （　　）、たばこを やめない。",
+      "choices": [
+        "関して",
+        "対して",
+        "かかわらず",
+        "よらず"
+      ],
+      "answer": 2,
+      "explanation": "〜にも かかわらず means \"despite\"."
+    },
+    {
+      "id": "n2-gf-002",
+      "type": "GRAMMAR_FORM",
+      "prompt": "この 問題は 専門家で （　　） 解決できない だろう。",
+      "choices": [
+        "あっては",
+        "なければ",
+        "あるなら",
+        "あるから"
+      ],
+      "answer": 1,
+      "explanation": "〜で なければ 〜ない means \"only … can\": only an expert could solve it."
+    },
+    {
+      "id": "n2-gf-003",
+      "type": "GRAMMAR_FORM",
+      "prompt": "お忙しい （　　）、わざわざ 来て くださって ありがとうございます。",
+      "choices": [
+        "ところ",
+        "うちに",
+        "ものの",
+        "ばかりに"
+      ],
+      "answer": 0,
+      "explanation": "お忙しい ところ is a set phrase: \"when you are busy\"."
+    },
+    {
+      "id": "n2-gf-004",
+      "type": "GRAMMAR_FORM",
+      "prompt": "実際に やって みない （　　）、うまく いくか どうか わからない。",
+      "choices": [
+        "ことから",
+        "ことだし",
+        "ことなく",
+        "ことには"
+      ],
+      "answer": 3,
+      "explanation": "〜ない ことには means \"unless you\"."
+    },
+    {
+      "id": "n2-gf-005",
+      "type": "GRAMMAR_FORM",
+      "prompt": "彼女は 歌手と して （　　）、女優と しても 活躍して いる。",
+      "choices": [
+        "からには",
+        "ものの",
+        "だけでなく",
+        "ばかりで"
+      ],
+      "answer": 2,
+      "explanation": "〜だけでなく 〜も means \"not only … but also\"."
+    },
+    {
+      "id": "n2-gf-006",
+      "type": "GRAMMAR_FORM",
+      "prompt": "約束した （　　）、必ず 守らなければ ならない。",
+      "choices": [
+        "わりに",
+        "からには",
+        "ものの",
+        "くせに"
+      ],
+      "answer": 1,
+      "explanation": "〜からには means \"now that, since\" and is followed by an obligation or resolve."
+    },
+    {
+      "id": "n2-gf-007",
+      "type": "GRAMMAR_FORM",
+      "prompt": "彼は 答えを 知って いる （　　）、何も 教えて くれない。",
+      "choices": [
+        "くせに",
+        "からには",
+        "ことには",
+        "うえに"
+      ],
+      "answer": 0,
+      "explanation": "〜くせに criticizes: \"even though he knows\"."
+    },
+    {
+      "id": "n2-gf-008",
+      "type": "GRAMMAR_FORM",
+      "prompt": "台風の 接近に （　　）、多くの 便が 欠航と なった。",
+      "choices": [
+        "基づき",
+        "限り",
+        "反して",
+        "伴い"
+      ],
+      "answer": 3,
+      "explanation": "〜に 伴い means \"along with, as a result of\"."
+    },
+    {
+      "id": "n2-gf-009",
+      "type": "GRAMMAR_FORM",
+      "prompt": "調査の 結果に （　　）、新しい 計画を 立てた。",
+      "choices": [
+        "反して",
+        "際して",
+        "基づいて",
+        "限って"
+      ],
+      "answer": 2,
+      "explanation": "〜に 基づいて means \"based on\"."
+    },
+    {
+      "id": "n2-gf-010",
+      "type": "GRAMMAR_FORM",
+      "prompt": "手伝って くれる 人が いないので、この 仕事は 一人で やる （　　）。",
+      "choices": [
+        "までもない",
+        "どころではない",
+        "わけがない",
+        "しかない"
+      ],
+      "answer": 3,
+      "explanation": "〜しかない means \"have no choice but to\"."
+    },
+    {
+      "id": "n2-gf-011",
+      "type": "GRAMMAR_FORM",
+      "prompt": "雨が 降り（　　）、試合は 予定どおり 行われた。",
+      "choices": [
+        "ながら",
+        "つつ",
+        "そうだったが",
+        "そうなら"
+      ],
+      "answer": 2,
+      "explanation": "降りそうだったが means \"it looked like rain, but\"."
+    },
+    {
+      "id": "n2-gf-012",
+      "type": "GRAMMAR_FORM",
+      "prompt": "彼女の 話は 聞けば 聞く （　　） わからなく なる。",
+      "choices": [
+        "まで",
+        "ほど",
+        "だけ",
+        "ばかり"
+      ],
+      "answer": 1,
+      "explanation": "〜ば 〜ほど means \"the more …, the more\"."
+    },
+    {
+      "id": "n2-gf-013",
+      "type": "GRAMMAR_FORM",
+      "prompt": "社長の 許可 （　　）、この 部屋には 入れません。",
+      "choices": [
+        "なしには",
+        "のもとで",
+        "ばかりか",
+        "とともに"
+      ],
+      "answer": 0,
+      "explanation": "〜なしには means \"without\"."
+    },
+    {
+      "id": "n2-so-001",
+      "type": "SENTENCE_ORDER",
+      "prompt": "この 仕事は 経験が ＿＿＿ ＿＿＿ ★ ＿＿＿ ものでは ない。",
+      "choices": [
+        "できる",
+        "そう簡単に",
+        "ない",
+        "人に"
+      ],
+      "answer": 1,
+      "explanation": "この 仕事は 経験が ない 人に そう簡単に できる ものでは ない. The ★ is そう簡単に."
+    },
+    {
+      "id": "n2-so-002",
+      "type": "SENTENCE_ORDER",
+      "prompt": "日本語は ＿＿＿ ＿＿＿ ★ ＿＿＿ 難しく なる。",
+      "choices": [
+        "する",
+        "勉強",
+        "すれば",
+        "ほど"
+      ],
+      "answer": 0,
+      "explanation": "日本語は 勉強 すれば する ほど 難しく なる. The ★ is する."
+    },
+    {
+      "id": "n2-so-003",
+      "type": "SENTENCE_ORDER",
+      "prompt": "彼女は 忙しい ＿＿＿ ＿＿＿ ★ ＿＿＿ 手伝って くれた。",
+      "choices": [
+        "にも",
+        "かかわらず",
+        "引っ越しを",
+        "わたしの"
+      ],
+      "answer": 3,
+      "explanation": "彼女は 忙しい にも かかわらず わたしの 引っ越しを 手伝って くれた. The ★ is わたしの."
+    },
+    {
+      "id": "n2-so-004",
+      "type": "SENTENCE_ORDER",
+      "prompt": "田中さんは ＿＿＿ ＿＿＿ ★ ＿＿＿ 違いない。",
+      "choices": [
+        "着いて",
+        "に",
+        "いる",
+        "もう"
+      ],
+      "answer": 2,
+      "explanation": "田中さんは もう 着いて いる に 違いない. The ★ is いる."
+    },
+    {
+      "id": "n2-so-005",
+      "type": "SENTENCE_ORDER",
+      "prompt": "子どもの ＿＿＿ ＿＿＿ ★ ＿＿＿ 忘れられない。",
+      "choices": [
+        "今でも",
+        "景色は",
+        "ころ",
+        "見た"
+      ],
+      "answer": 1,
+      "explanation": "子どもの ころ 見た 景色は 今でも 忘れられない. The ★ is 景色は."
+    },
+    {
+      "id": "n2-tg-001",
+      "type": "TEXT_GRAMMAR",
+      "prompt": "（１）",
+      "choices": [
+        "そのうえ",
+        "しかし",
+        "つまり",
+        "たとえば"
+      ],
+      "answer": 1,
+      "explanation": "The writer turns from the benefits to a problem: しかし.",
+      "passageId": "n2-tg-p1"
+    },
+    {
+      "id": "n2-tg-002",
+      "type": "TEXT_GRAMMAR",
+      "prompt": "（２）",
+      "choices": [
+        "急いで いる 人の",
+        "遅れた 電車の",
+        "駅員の",
+        "待って いた わたしの"
+      ],
+      "answer": 0,
+      "explanation": "The writer can understand the feelings of someone in a hurry.",
+      "passageId": "n2-tg-p1"
+    },
+    {
+      "id": "n2-tg-003",
+      "type": "TEXT_GRAMMAR",
+      "prompt": "（３）",
+      "choices": [
+        "ものの",
+        "くせに",
+        "のに",
+        "からこそ"
+      ],
+      "answer": 3,
+      "explanation": "〜からこそ emphasizes the reason: precisely because there is waiting time.",
+      "passageId": "n2-tg-p1"
+    },
+    {
+      "id": "n2-tg-004",
+      "type": "TEXT_GRAMMAR",
+      "prompt": "（４）",
+      "choices": [
+        "すると",
+        "それで",
+        "ただ",
+        "だから"
+      ],
+      "answer": 2,
+      "explanation": "ただ adds a qualification after \"I'm not rejecting convenience\".",
+      "passageId": "n2-tg-p1"
+    },
+    {
+      "id": "n2-tg-005",
+      "type": "TEXT_GRAMMAR",
+      "prompt": "（５）",
+      "choices": [
+        "豊かに させる",
+        "豊かに なる",
+        "豊かに した",
+        "豊かに なって いた"
+      ],
+      "answer": 1,
+      "explanation": "A future possibility with かもしれない: life may become a little richer.",
+      "passageId": "n2-tg-p1"
+    }
+  ]
+}

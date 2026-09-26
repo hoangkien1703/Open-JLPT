@@ -1,0 +1,356 @@
+{
+  "level": "N1",
+  "questions": [
+    {
+      "id": "n1-kr-001",
+      "type": "KANJI_READING",
+      "prompt": "大臣の 発言は 物議を <u>醸した</u>。",
+      "choices": [
+        "かもした",
+        "じょうした",
+        "かました",
+        "もたらした"
+      ],
+      "answer": 0,
+      "explanation": "醸す is read かもす. 物議を 醸す means to cause controversy."
+    },
+    {
+      "id": "n1-kr-002",
+      "type": "KANJI_READING",
+      "prompt": "両者の 主張には 大きな <u>隔たり</u>が ある。",
+      "choices": [
+        "かたより",
+        "わだかまり",
+        "ひろがり",
+        "へだたり"
+      ],
+      "answer": 3,
+      "explanation": "隔たり is read へだたり (gap, distance)."
+    },
+    {
+      "id": "n1-kr-003",
+      "type": "KANJI_READING",
+      "prompt": "祖父は 昔からの やり方を <u>頑なに</u> 守って いる。",
+      "choices": [
+        "かたなに",
+        "かたきなに",
+        "かたくなに",
+        "がんなに"
+      ],
+      "answer": 2,
+      "explanation": "頑な is read かたくな (stubborn)."
+    },
+    {
+      "id": "n1-kr-004",
+      "type": "KANJI_READING",
+      "prompt": "景気は <u>緩やか</u>に 回復して いる。",
+      "choices": [
+        "すこやか",
+        "ゆるやか",
+        "なだらか",
+        "おだやか"
+      ],
+      "answer": 1,
+      "explanation": "緩やか is read ゆるやか (gradual)."
+    },
+    {
+      "id": "n1-kr-005",
+      "type": "KANJI_READING",
+      "prompt": "会社の 経営状態が <u>著しく</u> 悪化した。",
+      "choices": [
+        "いちじるしく",
+        "おびただしく",
+        "はなはだしく",
+        "いさぎよく"
+      ],
+      "answer": 0,
+      "explanation": "著しく is read いちじるしく (remarkably)."
+    },
+    {
+      "id": "n1-kr-006",
+      "type": "KANJI_READING",
+      "prompt": "彼は 委員会の 議長を <u>務めた</u>。",
+      "choices": [
+        "おさめた",
+        "きわめた",
+        "もとめた",
+        "つとめた"
+      ],
+      "answer": 3,
+      "explanation": "務める is read つとめる (to serve as)."
+    },
+    {
+      "id": "n1-kr-007",
+      "type": "KANJI_READING",
+      "prompt": "彼女は 旅の 様子を 日記に <u>克明</u>に 記した。",
+      "choices": [
+        "こくみょう",
+        "かくめい",
+        "こくめい",
+        "かつめい"
+      ],
+      "answer": 2,
+      "explanation": "克明 is read こくめい (in minute detail)."
+    },
+    {
+      "id": "n1-cx-001",
+      "type": "CONTEXT",
+      "prompt": "彼の 提案は 現実性に （　　）ため、採用されなかった。",
+      "choices": [
+        "限る",
+        "外れる",
+        "欠ける",
+        "劣る"
+      ],
+      "answer": 2,
+      "explanation": "〜に 欠ける means to lack something."
+    },
+    {
+      "id": "n1-cx-002",
+      "type": "CONTEXT",
+      "prompt": "長年の 研究が （　　）、ついに 新薬の 開発に 成功した。",
+      "choices": [
+        "叶え",
+        "実り",
+        "満ち",
+        "果たし"
+      ],
+      "answer": 1,
+      "explanation": "研究が 実る means research bears fruit."
+    },
+    {
+      "id": "n1-cx-003",
+      "type": "CONTEXT",
+      "prompt": "彼女は 周囲の 反対を （　　）、留学を 決めた。",
+      "choices": [
+        "押し切って",
+        "押し付けて",
+        "押し寄せて",
+        "押し込んで"
+      ],
+      "answer": 0,
+      "explanation": "反対を 押し切る means to push ahead despite opposition."
+    },
+    {
+      "id": "n1-cx-004",
+      "type": "CONTEXT",
+      "prompt": "両国の 首脳は、問題の 解決に 向けて 協力する ことで （　　）した。",
+      "choices": [
+        "同感",
+        "納得",
+        "承認",
+        "合意"
+      ],
+      "answer": 3,
+      "explanation": "〜ことで 合意する is the set phrase for reaching an agreement."
+    },
+    {
+      "id": "n1-cx-005",
+      "type": "CONTEXT",
+      "prompt": "試合の 途中で 激しい 雨に （　　）、一時 中断された。",
+      "choices": [
+        "恵まれ",
+        "慕われ",
+        "見舞われ",
+        "迎えられ"
+      ],
+      "answer": 2,
+      "explanation": "〜に 見舞われる is used for being hit by bad weather or disasters."
+    },
+    {
+      "id": "n1-cx-006",
+      "type": "CONTEXT",
+      "prompt": "彼の 説明は （　　）で、要点が よく わからなかった。",
+      "choices": [
+        "厳密",
+        "あいまい",
+        "明快",
+        "簡潔"
+      ],
+      "answer": 1,
+      "explanation": "あいまい means vague."
+    },
+    {
+      "id": "n1-cx-007",
+      "type": "CONTEXT",
+      "prompt": "経費を （　　）ため、会議は すべて オンラインで 行う ことに なった。",
+      "choices": [
+        "削減する",
+        "削除する",
+        "減少する",
+        "省略する"
+      ],
+      "answer": 0,
+      "explanation": "経費を 削減する means to cut costs. 減少 is intransitive and can't take を."
+    },
+    {
+      "id": "n1-cx-008",
+      "type": "CONTEXT",
+      "prompt": "彼は 仕事ぶりが 誠実で、上司からの （　　）も 厚い。",
+      "choices": [
+        "依存",
+        "評判",
+        "名誉",
+        "信頼"
+      ],
+      "answer": 3,
+      "explanation": "信頼が 厚い means to be highly trusted."
+    },
+    {
+      "id": "n1-pa-001",
+      "type": "PARAPHRASE",
+      "prompt": "受付の 男性の 態度は <u>ぶっきらぼう</u>だった。",
+      "choices": [
+        "自信が なかった",
+        "愛想が なかった",
+        "落ち着いて いた",
+        "丁寧だった"
+      ],
+      "answer": 1,
+      "explanation": "ぶっきらぼう means curt, blunt."
+    },
+    {
+      "id": "n1-pa-002",
+      "type": "PARAPHRASE",
+      "prompt": "資金が 集まらず、計画は <u>頓挫</u>した。",
+      "choices": [
+        "途中で だめに なった",
+        "予定より 早く 終わった",
+        "順調に 進んだ",
+        "大きく 変更された"
+      ],
+      "answer": 0,
+      "explanation": "頓挫する means to come to a standstill, to fall through."
+    },
+    {
+      "id": "n1-pa-003",
+      "type": "PARAPHRASE",
+      "prompt": "彼女は <u>おもむろに</u> 立ち上がった。",
+      "choices": [
+        "急に",
+        "元気よく",
+        "何度も",
+        "ゆっくりと"
+      ],
+      "answer": 3,
+      "explanation": "おもむろに means slowly and deliberately, not suddenly."
+    },
+    {
+      "id": "n1-pa-004",
+      "type": "PARAPHRASE",
+      "prompt": "彼の 言い訳には もう <u>うんざりだ</u>。",
+      "choices": [
+        "驚いた",
+        "納得した",
+        "すっかり いやに なった",
+        "感心した"
+      ],
+      "answer": 2,
+      "explanation": "うんざり means fed up."
+    },
+    {
+      "id": "n1-pa-005",
+      "type": "PARAPHRASE",
+      "prompt": "彼女は 社内で <u>一目置かれて</u> いる。",
+      "choices": [
+        "周りから 期待されて いない",
+        "周りから 優れて いると 認められて いる",
+        "周りから よく 注意されて いる",
+        "周りから 避けられて いる"
+      ],
+      "answer": 1,
+      "explanation": "一目置く means to acknowledge someone's superiority."
+    },
+    {
+      "id": "n1-pa-006",
+      "type": "PARAPHRASE",
+      "prompt": "台風の 進路は まだ <u>予断を 許さない</u>。",
+      "choices": [
+        "今後 どう なるか わからない",
+        "すでに 心配は ない",
+        "悪く なる 一方だ",
+        "誰も 関心を 持って いない"
+      ],
+      "answer": 0,
+      "explanation": "予断を 許さない means the outcome can't be predicted."
+    },
+    {
+      "id": "n1-us-001",
+      "type": "USAGE",
+      "prompt": "踏まえる",
+      "choices": [
+        "雪を 踏まえて 歩くと、きゅっと 音が した。",
+        "約束を 踏まえて、遅刻して しまった。",
+        "階段を 踏まえて、足を けがした。",
+        "前回の 反省を 踏まえて、計画を 見直した。"
+      ],
+      "answer": 3,
+      "explanation": "〜を 踏まえて means based on, taking into account. The others need 踏みしめて, 破って and 踏み外して."
+    },
+    {
+      "id": "n1-us-002",
+      "type": "USAGE",
+      "prompt": "目処",
+      "choices": [
+        "試験の 目処を 見て、がっかりした。",
+        "次の 目処で 電車を 降りて ください。",
+        "工事は 年内に 完成する 目処が 立った。",
+        "彼は 目処が いいので、遠くの 看板も 読める。"
+      ],
+      "answer": 2,
+      "explanation": "目処が 立つ means the prospect becomes clear. The others need 目, 結果 and 駅."
+    },
+    {
+      "id": "n1-us-003",
+      "type": "USAGE",
+      "prompt": "打ち明ける",
+      "choices": [
+        "箱を 打ち明けると、中から 手紙が 出て きた。",
+        "長年 誰にも 言えなかった 悩みを 友人に 打ち明けた。",
+        "窓を 打ち明けて、部屋の 空気を 入れ替えた。",
+        "会議の 最後に、部長が 結論を 打ち明けます。"
+      ],
+      "answer": 1,
+      "explanation": "打ち明ける means to confide a secret. The others need 開け放って, 発表します and 開けると."
+    },
+    {
+      "id": "n1-us-004",
+      "type": "USAGE",
+      "prompt": "裏付ける",
+      "choices": [
+        "この 実験結果は 彼の 仮説を 裏付けて いる。",
+        "コートの 裏付けが 破れて しまった。",
+        "彼は 信じて いた 友人を 裏付けた。",
+        "書類の 裏付けに 名前を 書いて ください。"
+      ],
+      "answer": 0,
+      "explanation": "裏付ける means to support with evidence. The others need 裏地, 裏切った and 裏."
+    },
+    {
+      "id": "n1-us-005",
+      "type": "USAGE",
+      "prompt": "ひたむき",
+      "choices": [
+        "この 道は ひたむきなので、迷う ことは ない。",
+        "彼女は 髪を ひたむきに 切って、別人の ようだ。",
+        "朝から 雨が ひたむきに 降り続いて いる。",
+        "彼の ひたむきな 努力が 周囲の 人を 動かした。"
+      ],
+      "answer": 3,
+      "explanation": "ひたむき means earnest, single-minded. The others need まっすぐ, ばっさり and 絶え間なく."
+    },
+    {
+      "id": "n1-us-006",
+      "type": "USAGE",
+      "prompt": "手際",
+      "choices": [
+        "会議の 手際に 資料を 配った。",
+        "手際を 書いて、新しい 住所を 知らせた。",
+        "彼女は 手際よく 料理を 仕上げた。",
+        "外は 寒くて、手際が 冷たく なった。"
+      ],
+      "answer": 2,
+      "explanation": "手際が いい means skillful and efficient. The others need 手, 冒頭 and 手紙."
+    }
+  ]
+}

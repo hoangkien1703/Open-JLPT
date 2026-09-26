@@ -1,0 +1,290 @@
+{
+  "level": "N1",
+  "passages": [
+    {
+      "id": "n1-tg-p1",
+      "title": "言葉の 「乱れ」",
+      "text": "「最近の 若者の 言葉は 乱れて いる」。こうした 嘆きは、いつの 時代にも 繰り返されて きた。平安時代の 随筆にも、当時の 若者の 言葉づかいを 批判する 記述が 見られると いう。（１）、言葉の 乱れを 嘆く 声は 千年 以上 前から 存在して いた ことに なる。\n言語学の 立場から 見れば、言葉が 変化するのは ごく 自然な ことだ。新しい 表現が 生まれ、古い 表現が 使われなく なる。その 過程で 生じる 現象を、年長者は 「乱れ」と 呼んで いるに （２）。今日 正しいと される 言葉の 多くも、かつては 「誤用」だったのである。\n（３）、あらゆる 変化を 無条件に 受け入れるべきだと いう わけでは ない。相手や 場面に 応じて 適切な 言葉を 選ぶ 力は、社会生活を 送る うえで 欠かせない。問題は 新しい 言葉を 使う こと そのもの （４）、場面に ふさわしくない 使い方を する ことに ある。\n言葉の 変化を 頭ごなしに 否定するのでも、無批判に 追いかけるのでも なく、その 背景に 目を 向ける。そう した 姿勢こそが、今 求められて いるの （５）。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "n1-gf-001",
+      "type": "GRAMMAR_FORM",
+      "prompt": "彼は 社長に 就任する （　　）、会社の 改革に 着手した。",
+      "choices": [
+        "や否や",
+        "ものの",
+        "ことなく",
+        "ながらも"
+      ],
+      "answer": 0,
+      "explanation": "〜や否や means \"as soon as\"."
+    },
+    {
+      "id": "n1-gf-002",
+      "type": "GRAMMAR_FORM",
+      "prompt": "被災地の 惨状は、見る （　　） ものだった。",
+      "choices": [
+        "に足る",
+        "までもない",
+        "べくもない",
+        "に堪えない"
+      ],
+      "answer": 3,
+      "explanation": "見るに堪えない means too painful to look at."
+    },
+    {
+      "id": "n1-gf-003",
+      "type": "GRAMMAR_FORM",
+      "prompt": "この 計画は、住民の 協力 （　　） 成功しなかった だろう。",
+      "choices": [
+        "をもって",
+        "といえども",
+        "なくしては",
+        "ならでは"
+      ],
+      "answer": 2,
+      "explanation": "〜なくしては means \"without\" and is followed by a negative outcome."
+    },
+    {
+      "id": "n1-gf-004",
+      "type": "GRAMMAR_FORM",
+      "prompt": "親の 心配 （　　）、息子は 毎晩 遅くまで 遊び歩いて いる。",
+      "choices": [
+        "をおいて",
+        "をよそに",
+        "をもとに",
+        "を皮切りに"
+      ],
+      "answer": 1,
+      "explanation": "〜を よそに means \"ignoring, paying no heed to\"."
+    },
+    {
+      "id": "n1-gf-005",
+      "type": "GRAMMAR_FORM",
+      "prompt": "一流の 職人 （　　）、この 細かい 作業は 難しい。",
+      "choices": [
+        "といえども",
+        "ならでは",
+        "なりに",
+        "ばかりに"
+      ],
+      "answer": 0,
+      "explanation": "〜と いえども means \"even though (one is)\"."
+    },
+    {
+      "id": "n1-gf-006",
+      "type": "GRAMMAR_FORM",
+      "prompt": "この 店 （　　） 味を 楽しみに、遠くから 客が 訪れる。",
+      "choices": [
+        "なりの",
+        "までの",
+        "ゆえの",
+        "ならではの"
+      ],
+      "answer": 3,
+      "explanation": "〜ならではの means \"unique to\"."
+    },
+    {
+      "id": "n1-gf-007",
+      "type": "GRAMMAR_FORM",
+      "prompt": "彼の 発言は、誤解を 招き （　　） ものだった。",
+      "choices": [
+        "がたい",
+        "づらい",
+        "かねない",
+        "かねる"
+      ],
+      "answer": 2,
+      "explanation": "〜かねない means \"could well lead to\" something bad."
+    },
+    {
+      "id": "n1-gf-008",
+      "type": "GRAMMAR_FORM",
+      "prompt": "彼女は 涙 （　　）、事故の 様子を 語った。",
+      "choices": [
+        "ずくめで",
+        "ながらに",
+        "ごとく",
+        "まみれに"
+      ],
+      "answer": 1,
+      "explanation": "涙ながらに means \"in tears\"."
+    },
+    {
+      "id": "n1-gf-009",
+      "type": "GRAMMAR_FORM",
+      "prompt": "一度 引き受けた （　　）、最後まで やり遂げる べきだ。",
+      "choices": [
+        "以上",
+        "ばかりに",
+        "ものの",
+        "ところで"
+      ],
+      "answer": 0,
+      "explanation": "〜以上 means \"since, now that\", followed by an obligation."
+    },
+    {
+      "id": "n1-gf-010",
+      "type": "GRAMMAR_FORM",
+      "prompt": "雨が 降ろう （　　）、明日の 試合は 決行する。",
+      "choices": [
+        "に",
+        "が",
+        "で",
+        "ば"
+      ],
+      "answer": 1,
+      "explanation": "〜ようが means \"no matter whether\"."
+    },
+    {
+      "id": "n1-gf-011",
+      "type": "GRAMMAR_FORM",
+      "prompt": "彼の 才能を もって （　　）、この 難問も 解決できる だろう。",
+      "choices": [
+        "すれば",
+        "しても",
+        "しては",
+        "するなら"
+      ],
+      "answer": 0,
+      "explanation": "〜を もって すれば means \"with (that ability)\", followed by a positive result."
+    },
+    {
+      "id": "n1-so-001",
+      "type": "SENTENCE_ORDER",
+      "prompt": "彼は ＿＿＿ ＿＿＿ ★ ＿＿＿ 人物だ。",
+      "choices": [
+        "業界では",
+        "言わず",
+        "と",
+        "知れた"
+      ],
+      "answer": 3,
+      "explanation": "彼は 業界では 言わず と 知れた 人物だ (He needs no introduction in the industry). The ★ is 知れた."
+    },
+    {
+      "id": "n1-so-002",
+      "type": "SENTENCE_ORDER",
+      "prompt": "部長の 許可 ＿＿＿ ＿＿＿ ★ ＿＿＿ ことは できない。",
+      "choices": [
+        "この",
+        "使う",
+        "部屋を",
+        "なしに"
+      ],
+      "answer": 2,
+      "explanation": "部長の 許可 なしに この 部屋を 使う ことは できない. The ★ is 部屋を."
+    },
+    {
+      "id": "n1-so-003",
+      "type": "SENTENCE_ORDER",
+      "prompt": "彼女の 歌声は ＿＿＿ ＿＿＿ ★ ＿＿＿ 美しかった。",
+      "choices": [
+        "魅了する ほど",
+        "すべてを",
+        "聞く",
+        "人"
+      ],
+      "answer": 1,
+      "explanation": "彼女の 歌声は 聞く 人 すべてを 魅了する ほど 美しかった. The ★ is すべてを."
+    },
+    {
+      "id": "n1-so-004",
+      "type": "SENTENCE_ORDER",
+      "prompt": "この 問題は ＿＿＿ ＿＿＿ ★ ＿＿＿ 解決できない。",
+      "choices": [
+        "だけでは",
+        "一企業の",
+        "努力",
+        "とうてい"
+      ],
+      "answer": 0,
+      "explanation": "この 問題は 一企業の 努力 だけでは とうてい 解決できない. The ★ is だけでは."
+    },
+    {
+      "id": "n1-so-005",
+      "type": "SENTENCE_ORDER",
+      "prompt": "彼は 失敗を ＿＿＿ ＿＿＿ ★ ＿＿＿ 挑戦し続けた。",
+      "choices": [
+        "恐れる",
+        "こと",
+        "何度も",
+        "なく"
+      ],
+      "answer": 3,
+      "explanation": "彼は 失敗を 恐れる こと なく 何度も 挑戦し続けた. The ★ is なく."
+    },
+    {
+      "id": "n1-tg-001",
+      "type": "TEXT_GRAMMAR",
+      "prompt": "（１）",
+      "choices": [
+        "ところが",
+        "もっとも",
+        "にもかかわらず",
+        "つまり"
+      ],
+      "answer": 3,
+      "explanation": "つまり restates the conclusion: complaints have existed for over a thousand years.",
+      "passageId": "n1-tg-p1"
+    },
+    {
+      "id": "n1-tg-002",
+      "type": "TEXT_GRAMMAR",
+      "prompt": "（２）",
+      "choices": [
+        "たえない",
+        "あたらない",
+        "すぎない",
+        "かたくない"
+      ],
+      "answer": 2,
+      "explanation": "〜に すぎない means \"is merely\": older people merely call natural change \"disorder\".",
+      "passageId": "n1-tg-p1"
+    },
+    {
+      "id": "n1-tg-003",
+      "type": "TEXT_GRAMMAR",
+      "prompt": "（３）",
+      "choices": [
+        "すなわち",
+        "とはいえ",
+        "したがって",
+        "そのうえ"
+      ],
+      "answer": 1,
+      "explanation": "とはいえ introduces a qualification: that said, not every change should be accepted.",
+      "passageId": "n1-tg-p1"
+    },
+    {
+      "id": "n1-tg-004",
+      "type": "TEXT_GRAMMAR",
+      "prompt": "（４）",
+      "choices": [
+        "ではなく",
+        "だけでなく",
+        "にかかわらず",
+        "にとって"
+      ],
+      "answer": 0,
+      "explanation": "問題は A ではなく B に ある: the problem is not A but B.",
+      "passageId": "n1-tg-p1"
+    },
+    {
+      "id": "n1-tg-005",
+      "type": "TEXT_GRAMMAR",
+      "prompt": "（５）",
+      "choices": [
+        "にすぎない",
+        "かもしれなかった",
+        "だったのだ",
+        "ではないだろうか"
+      ],
+      "answer": 3,
+      "explanation": "〜の ではないだろうか presents the writer's conclusion as a suggestion.",
+      "passageId": "n1-tg-p1"
+    }
+  ]
+}

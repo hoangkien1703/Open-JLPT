@@ -1,0 +1,829 @@
+{
+  "level": "N2",
+  "questions": [
+    {
+      "id": "n2-tk-001",
+      "type": "TASK",
+      "prompt": "女の人は このあと まず 何を しますか。",
+      "choices": [
+        "当日の 資料を 作る",
+        "課長に リストを 確認して もらう",
+        "招待状を 送る",
+        "会場を 予約する"
+      ],
+      "answer": 1,
+      "explanation": "The venue is booked; before sending invitations she must have the section chief check the list.",
+      "situation": "会社で 男の人と 女の人が 話して います。",
+      "script": [
+        {
+          "speaker": "M",
+          "text": "佐藤さん、来週の 新商品発表会の 件だけど、会場の 予約は できた？"
+        },
+        {
+          "speaker": "F",
+          "text": "はい、先週 済ませました。今は 招待状の 準備を して います。"
+        },
+        {
+          "speaker": "M",
+          "text": "そう。招待状を 送る 前に、お客様の リストを もう 一度 課長に 確認して もらってね。先月 担当が 変わった 会社が あるから。"
+        },
+        {
+          "speaker": "F",
+          "text": "わかりました。じゃ、リストを 課長に 見て いただいてから、招待状を 送ります。"
+        },
+        {
+          "speaker": "M",
+          "text": "うん、よろしく。あと、当日の 資料は 来週で いいから。"
+        }
+      ]
+    },
+    {
+      "id": "n2-tk-002",
+      "type": "TASK",
+      "prompt": "男の学生は このあと 何を しますか。",
+      "choices": [
+        "成績証明書を 申し込む",
+        "申請書を 書く",
+        "先生に 推薦書を 頼む",
+        "推薦書を 事務室に 送る"
+      ],
+      "answer": 0,
+      "explanation": "The application is written and the teacher sends the recommendation. He goes to request the transcript.",
+      "situation": "大学で 女の学生と 男の学生が 話して います。",
+      "script": [
+        {
+          "speaker": "F",
+          "text": "山田くん、奨学金の 申請、もう 出した？締め切り、金曜日だよ。"
+        },
+        {
+          "speaker": "M",
+          "text": "え、まだだ。申請書は 書いたんだけど。"
+        },
+        {
+          "speaker": "F",
+          "text": "成績証明書も 要るよ。事務室で 発行して もらうのに 三日 かかるから、急いだ ほうが いいよ。"
+        },
+        {
+          "speaker": "M",
+          "text": "そうか。推薦書は？"
+        },
+        {
+          "speaker": "F",
+          "text": "推薦書は 先生が 直接 事務室に 送って くれるって。"
+        },
+        {
+          "speaker": "M",
+          "text": "じゃあ、今から 事務室に 行って くる。"
+        }
+      ]
+    },
+    {
+      "id": "n2-tk-003",
+      "type": "TASK",
+      "prompt": "男の人は 何を 持って いけば いいですか。",
+      "choices": [
+        "保険証と お薬手帳",
+        "問診票",
+        "保険証と 問診票",
+        "保険証"
+      ],
+      "answer": 3,
+      "explanation": "He takes no medicine and the questionnaire is filled in at the clinic, so only the insurance card.",
+      "situation": "電話で 歯医者の 受付の 人と 男の人が 話して います。",
+      "script": [
+        {
+          "speaker": "F",
+          "text": "はい、さくら歯科です。"
+        },
+        {
+          "speaker": "M",
+          "text": "あの、明日の 十時に 予約して いる 田中ですが、初めてなので、何か 持って いく ものは ありますか。"
+        },
+        {
+          "speaker": "F",
+          "text": "保険証を お持ち ください。それから、今 飲んで いる お薬が あれば、お薬手帳も お願いします。"
+        },
+        {
+          "speaker": "M",
+          "text": "薬は 飲んで いません。"
+        },
+        {
+          "speaker": "F",
+          "text": "では、保険証だけで 結構です。問診票は こちらで 書いて いただきます。"
+        }
+      ]
+    },
+    {
+      "id": "n2-tk-004",
+      "type": "TASK",
+      "prompt": "男の人は 資料を どう 直しますか。",
+      "choices": [
+        "グラフを 増やす",
+        "まとめの ページを なくす",
+        "グラフを 減らし、まとめの ページを 加える",
+        "文字を 大きく する"
+      ],
+      "answer": 2,
+      "explanation": "Keep only the sales graph and add a summary page. The font size is fine.",
+      "situation": "会社で 女の人と 男の人が 話して います。",
+      "script": [
+        {
+          "speaker": "F",
+          "text": "鈴木さん、明日の プレゼンの 資料、見たわよ。全体的には いいと 思う。"
+        },
+        {
+          "speaker": "M",
+          "text": "ありがとうございます。"
+        },
+        {
+          "speaker": "F",
+          "text": "ただ、グラフが 多すぎて、何を 言いたいのか わかりにくいの。一番 大事な 売り上げの グラフだけ 残して、ほかは 数字で 説明したら？"
+        },
+        {
+          "speaker": "M",
+          "text": "わかりました。文字も 小さいですか。"
+        },
+        {
+          "speaker": "F",
+          "text": "文字は 大丈夫。あと、最後に まとめの ページを 一枚 入れて おいて。"
+        },
+        {
+          "speaker": "M",
+          "text": "はい。"
+        }
+      ]
+    },
+    {
+      "id": "n2-tk-005",
+      "type": "TASK",
+      "prompt": "女の人は まず どの 窓口に 行きますか。",
+      "choices": [
+        "4番",
+        "1番",
+        "2番",
+        "3番"
+      ],
+      "answer": 1,
+      "explanation": "The birth registration comes first, at window 1.",
+      "situation": "市役所で 女の人と 係の人が 話して います。",
+      "script": [
+        {
+          "speaker": "F",
+          "text": "すみません、子どもが 生まれたので、手続きに 来たんですが。"
+        },
+        {
+          "speaker": "M",
+          "text": "おめでとうございます。出生届は 1番の 窓口です。児童手当の 申請も されますか？"
+        },
+        {
+          "speaker": "F",
+          "text": "はい、お願いします。"
+        },
+        {
+          "speaker": "M",
+          "text": "児童手当は 3番ですが、出生届が 終わってからに なります。まずは 1番で 出生届を 出して ください。"
+        }
+      ]
+    },
+    {
+      "id": "n2-pt-001",
+      "type": "POINT",
+      "prompt": "女の人は どうして 引っ越す ことに しましたか。",
+      "choices": [
+        "会社が 移転して、通勤に 時間が かかるように なるから",
+        "今の マンションが 古いから",
+        "家賃が 高いから",
+        "広い 部屋に 住みたいから"
+      ],
+      "answer": 0,
+      "explanation": "Her company is relocating and the commute would become 90 minutes.",
+      "situation": "男の人と 女の人が 話して います。",
+      "script": [
+        {
+          "speaker": "M",
+          "text": "引っ越すんだって？今の マンション、新しくて きれいなのに。"
+        },
+        {
+          "speaker": "F",
+          "text": "そうなんだけど、会社が 移転する ことに なって。今の 所からだと 通勤に 一時間半も かかるように なるの。"
+        },
+        {
+          "speaker": "M",
+          "text": "それは 大変だね。家賃は？"
+        },
+        {
+          "speaker": "F",
+          "text": "次の 所は 少し 高く なるけど、仕方ないわね。"
+        }
+      ]
+    },
+    {
+      "id": "n2-pt-002",
+      "type": "POINT",
+      "prompt": "男の人は この レストランの 何が 一番 いいと 言って いますか。",
+      "choices": [
+        "料理の 味",
+        "値段の 安さ",
+        "デザートの 味",
+        "店員の 対応"
+      ],
+      "answer": 3,
+      "explanation": "The food is ordinary; the staff's service is why he comes back.",
+      "situation": "女の人と 男の人が 話して います。",
+      "script": [
+        {
+          "speaker": "F",
+          "text": "この 店、よく 来るの？"
+        },
+        {
+          "speaker": "M",
+          "text": "うん。料理は 普通だけど、店の 人の 対応が すごく いいんだ。前に 誕生日だって 言ったら、デザートを サービスして くれてね。"
+        },
+        {
+          "speaker": "F",
+          "text": "へえ。値段は？"
+        },
+        {
+          "speaker": "M",
+          "text": "安くは ないよ。でも、あの 対応が あるから また 来たく なるんだよね。"
+        }
+      ]
+    },
+    {
+      "id": "n2-pt-003",
+      "type": "POINT",
+      "prompt": "先生は レポートの 何が 一番 問題だと 言って いますか。",
+      "choices": [
+        "資料が 足りない こと",
+        "締め切りに 遅れた こと",
+        "自分の 意見が 書かれて いない こと",
+        "テーマが 面白くない こと"
+      ],
+      "answer": 2,
+      "explanation": "The report only introduces sources and has none of his own opinion.",
+      "situation": "大学で 男の学生と 先生が 話して います。",
+      "script": [
+        {
+          "speaker": "M",
+          "text": "先生、レポートの 評価が 低かったんですが、何が いけなかったんでしょうか。"
+        },
+        {
+          "speaker": "F",
+          "text": "テーマは 面白いし、資料も よく 集めて あったわね。"
+        },
+        {
+          "speaker": "M",
+          "text": "はい、時間を かけて 調べました。"
+        },
+        {
+          "speaker": "F",
+          "text": "ただ、集めた 資料を 紹介して いるだけで、あなた自身の 意見が どこにも ないのよ。それが 一番 残念だったわ。"
+        }
+      ]
+    },
+    {
+      "id": "n2-pt-004",
+      "type": "POINT",
+      "prompt": "男の人が 海外の 仕事を 断ったのは なぜですか。",
+      "choices": [
+        "給料が 安いから",
+        "父親が 入院して いるから",
+        "英語が 苦手だから",
+        "仕事に 興味が ないから"
+      ],
+      "answer": 1,
+      "explanation": "His father is in hospital and he wants to stay close to home.",
+      "situation": "会社で 女の人と 男の人が 話して います。",
+      "script": [
+        {
+          "speaker": "F",
+          "text": "海外の プロジェクト、断ったって 聞いたけど、本当？チャンスだったのに。"
+        },
+        {
+          "speaker": "M",
+          "text": "うん。英語は なんとか なると 思うし、仕事にも 興味は あったんだけど。"
+        },
+        {
+          "speaker": "F",
+          "text": "じゃあ、どうして？"
+        },
+        {
+          "speaker": "M",
+          "text": "父が 入院して いてね。しばらくは 家の 近くに いたいんだ。"
+        }
+      ]
+    },
+    {
+      "id": "n2-pt-005",
+      "type": "POINT",
+      "prompt": "この カメラの 一番の 特徴は 何ですか。",
+      "choices": [
+        "水の 中で 撮影できる こと",
+        "軽い こと",
+        "画質が いい こと",
+        "値段が 安い こと"
+      ],
+      "answer": 0,
+      "explanation": "一番の 魅力は、水の 中でも 使える ことです.",
+      "situation": "テレビで 女の人が 新しい カメラに ついて 話して います。",
+      "script": [
+        {
+          "speaker": "F",
+          "text": "今日 ご紹介するのは、この 新しい カメラです。重さは 三百グラムと、これまでの 製品と 比べて 特別 軽いわけでは ありません。画質も 従来の 製品と ほぼ 同じです。しかし、この カメラの 一番の 魅力は、水の 中でも 使える ことです。水深 三十メートルまで 撮影が 可能なので、海での ダイビングにも 持って いけます。"
+        }
+      ]
+    },
+    {
+      "id": "n2-pt-006",
+      "type": "POINT",
+      "prompt": "女の人は どうして ジムを やめましたか。",
+      "choices": [
+        "家から 遠かったから",
+        "料金が 高かったから",
+        "忙しく なったから",
+        "混んで いて 機械が 使えなかったから"
+      ],
+      "answer": 3,
+      "explanation": "It was too crowded and the machines were always taken.",
+      "situation": "男の人と 女の人が 話して います。",
+      "script": [
+        {
+          "speaker": "M",
+          "text": "最近 ジムに 行ってないの？"
+        },
+        {
+          "speaker": "F",
+          "text": "うん、やめちゃった。家から 近くて 便利だったし、料金も 高くなかったんだけどね。"
+        },
+        {
+          "speaker": "M",
+          "text": "じゃあ、どうして？"
+        },
+        {
+          "speaker": "F",
+          "text": "人が 多すぎて、使いたい 機械が いつも 空いてなかったの。待って ばかりで、運動に ならなくて。"
+        }
+      ]
+    },
+    {
+      "id": "n2-sm-001",
+      "type": "SUMMARY",
+      "prompt": "男の人の 話の テーマは 何ですか。",
+      "choices": [
+        "早起きの ための 運動の 方法",
+        "睡眠不足の 原因",
+        "出勤時間を 早める 会社の 取り組み",
+        "朝の 時間の 使い方と その 注意点"
+      ],
+      "answer": 3,
+      "explanation": "He explains using morning time and warns against cutting sleep.",
+      "situation": "ラジオで 男の人が 話して います。",
+      "script": [
+        {
+          "speaker": "M",
+          "text": "最近、「朝活」と いう 言葉を よく 耳に します。出勤前の 朝の 時間を 使って、勉強や 運動などを する ことです。朝は 電話や メールが 少なく、集中しやすいと いう 利点が あります。ただ、無理に 早起きを して 睡眠時間を 削っては 意味が ありません。まずは 夜 早めに 寝る ことから 始めて、自分に 合った ペースで 取り入れる ことが 大切です。"
+        }
+      ]
+    },
+    {
+      "id": "n2-sm-002",
+      "type": "SUMMARY",
+      "prompt": "女の人が 言いたい ことは 何ですか。",
+      "choices": [
+        "デザインより 値段を 重視するべきだ",
+        "服を 買う 量を 減らすべきだ",
+        "商品の 背景を 考えて 選ぶ ことが 大切だ",
+        "安い 服は 質が 悪い"
+      ],
+      "answer": 2,
+      "explanation": "Choosing a product is choosing what kind of society to support.",
+      "situation": "講演会で 女の人が 話して います。",
+      "script": [
+        {
+          "speaker": "F",
+          "text": "わたしたちは 買い物を する とき、つい 値段や デザインだけで 選びがちです。しかし、その 商品が どこで、どのように 作られたのかを 考えた ことは あるでしょうか。安い 服の 裏には、低い 賃金で 長時間 働く 人たちが いるかもしれません。商品を 選ぶ ことは、どんな 社会を 支えるかを 選ぶ ことでも あるのです。"
+        }
+      ]
+    },
+    {
+      "id": "n2-sm-003",
+      "type": "SUMMARY",
+      "prompt": "男の人は 何に ついて 話して いますか。",
+      "choices": [
+        "農業を する 若者の 増加",
+        "使われなく なった 学校を 利用した 村の 取り組み",
+        "小学校の 給食の 歴史",
+        "都会の 家族の 休日の 過ごし方"
+      ],
+      "answer": 1,
+      "explanation": "The village turned an old school building into lodging, creating jobs.",
+      "situation": "テレビで 男の人が 話して います。",
+      "script": [
+        {
+          "speaker": "M",
+          "text": "この 村では、古く なった 小学校の 校舎を 利用して、宿泊施設を 始めました。教室を 客室に、給食室を レストランに 改装し、都会から 来た 家族連れに 人気と なって います。地元の 人が 料理を 作ったり、農業体験の 案内を したり する ことで、村に 新しい 仕事も 生まれました。"
+        }
+      ]
+    },
+    {
+      "id": "n2-sm-004",
+      "type": "SUMMARY",
+      "prompt": "女の人は 何に ついて 話して いますか。",
+      "choices": [
+        "わからない ときの 質問の 仕方",
+        "仕事を 早く 終わらせる 方法",
+        "先輩の 仕事の 手伝い方",
+        "チームで 会議を する 方法"
+      ],
+      "answer": 0,
+      "explanation": "When and how to ask questions when you are stuck.",
+      "situation": "会社で 女の人が 新入社員に 話して います。",
+      "script": [
+        {
+          "speaker": "F",
+          "text": "仕事で わからない ことが あった とき、自分で 調べる ことは 大切です。でも、一時間 考えても わからない ときは、遠慮しないで 先輩に 聞いて ください。一人で 悩んで 時間を 無駄に するより、早く 聞いて 仕事を 進める ほうが、チームの ためにも なります。聞く 前に、自分が 何が わからないのかを 整理して おくと、相手も 答えやすいですよ。"
+        }
+      ]
+    },
+    {
+      "id": "n2-sm-005",
+      "type": "SUMMARY",
+      "prompt": "先生は ことわざに ついて どのように 説明して いますか。",
+      "choices": [
+        "いつでも 正しい 教えだ",
+        "現代では 役に 立たない",
+        "意味が 反対の ものは 間違いだ",
+        "状況に よって 使い分ける ものだ"
+      ],
+      "answer": 3,
+      "explanation": "つまり … 状況に 合わせて 使い分ける ものなのです.",
+      "situation": "大学の 授業で 先生が 話して います。",
+      "script": [
+        {
+          "speaker": "M",
+          "text": "ことわざは 昔の 人の 知恵が つまった 言葉だと 言われます。しかし、中には 「急がば回れ」と 「善は急げ」のように、反対の 意味を 持つ ものも あります。つまり、ことわざは どんな 場面でも 正しいと いう わけでは なく、状況に 合わせて 使い分ける ものなのです。"
+        }
+      ]
+    },
+    {
+      "id": "n2-qr-001",
+      "type": "QUICK_RESPONSE",
+      "prompt": "",
+      "choices": [
+        "今週は 仕上がって いました。",
+        "わかりました。金曜日までに やります。",
+        "はい、助かりました。"
+      ],
+      "answer": 1,
+      "explanation": "A polite request; accept it.",
+      "script": [
+        {
+          "speaker": "F",
+          "text": "この 書類、今週中に 仕上げて もらえると 助かるんだけど。"
+        }
+      ]
+    },
+    {
+      "id": "n2-qr-002",
+      "type": "QUICK_RESPONSE",
+      "prompt": "",
+      "choices": [
+        "帰ったと 思いませんでした。",
+        "ええ、ちょっと 片付けが あって。",
+        "はい、もう 帰りました。"
+      ],
+      "answer": 1,
+      "explanation": "てっきり 〜と 思った means \"I was sure that\". Explain why you're still here.",
+      "script": [
+        {
+          "speaker": "M",
+          "text": "あれ、まだ 残ってたの？てっきり もう 帰ったかと 思った。"
+        }
+      ]
+    },
+    {
+      "id": "n2-qr-003",
+      "type": "QUICK_RESPONSE",
+      "prompt": "",
+      "choices": [
+        "送別会、楽しかったですね。",
+        "わたしで よければ、やらせて いただきます。",
+        "はい、幹事を お願いします。"
+      ],
+      "answer": 1,
+      "explanation": "Accept the role of organizer humbly.",
+      "script": [
+        {
+          "speaker": "F",
+          "text": "田中さんの 送別会、幹事を お願いしても いいかな。"
+        }
+      ]
+    },
+    {
+      "id": "n2-qr-004",
+      "type": "QUICK_RESPONSE",
+      "prompt": "",
+      "choices": [
+        "開いてて よかった。",
+        "本当だ。定休日だったんだね。",
+        "うん、来て よかったね。"
+      ],
+      "answer": 1,
+      "explanation": "せっかく 〜のに expresses disappointment.",
+      "script": [
+        {
+          "speaker": "M",
+          "text": "せっかく 来たのに、店、閉まってるね。"
+        }
+      ]
+    },
+    {
+      "id": "n2-qr-005",
+      "type": "QUICK_RESPONSE",
+      "prompt": "",
+      "choices": [
+        "会議は 斜めの 部屋だったね。",
+        "うん、何か あったのかな。",
+        "うん、機嫌が よくて よかった。"
+      ],
+      "answer": 1,
+      "explanation": "ご機嫌斜め means in a bad mood.",
+      "script": [
+        {
+          "speaker": "F",
+          "text": "昨日の 会議、部長 かなり ご機嫌斜めだったね。"
+        }
+      ]
+    },
+    {
+      "id": "n2-qr-006",
+      "type": "QUICK_RESPONSE",
+      "prompt": "",
+      "choices": [
+        "いいえ、任せて ください。",
+        "はい、精一杯 やらせて いただきます。",
+        "はい、任せましょう。"
+      ],
+      "answer": 1,
+      "explanation": "Accept the responsibility with humble language.",
+      "script": [
+        {
+          "speaker": "M",
+          "text": "この プロジェクト、君に 任せても いいかな。"
+        }
+      ]
+    },
+    {
+      "id": "n2-qr-007",
+      "type": "QUICK_RESPONSE",
+      "prompt": "",
+      "choices": [
+        "風邪を ひかせたの？",
+        "そうなんだ。心配だね。",
+        "よかったね、休めて。"
+      ],
+      "answer": 1,
+      "explanation": "こじらせる means to make an illness worse; show concern.",
+      "script": [
+        {
+          "speaker": "F",
+          "text": "佐藤さん、今日 休みだって。風邪、こじらせたらしいよ。"
+        }
+      ]
+    },
+    {
+      "id": "n2-qr-008",
+      "type": "QUICK_RESPONSE",
+      "prompt": "",
+      "choices": [
+        "いいえ、座って いません。",
+        "いえ、どうぞ お座り ください。",
+        "はい、いらっしゃいませ。"
+      ],
+      "answer": 1,
+      "explanation": "He asks whether the seat is taken.",
+      "script": [
+        {
+          "speaker": "M",
+          "text": "すみません、この 席、どなたか いらっしゃいますか。"
+        }
+      ]
+    },
+    {
+      "id": "n2-qr-009",
+      "type": "QUICK_RESPONSE",
+      "prompt": "",
+      "choices": [
+        "無理だと 思いました。",
+        "いえ、好きで やって いる ことですから。",
+        "はい、無理して ください。"
+      ],
+      "answer": 1,
+      "explanation": "Reassure her that you are doing it willingly.",
+      "script": [
+        {
+          "speaker": "F",
+          "text": "そんなに 無理しなくても いいのに。"
+        }
+      ]
+    },
+    {
+      "id": "n2-qr-010",
+      "type": "QUICK_RESPONSE",
+      "prompt": "",
+      "choices": [
+        "はい、代わりに 行って もらいます。",
+        "出張、お疲れさまでした。",
+        "来週ですか…。ちょっと スケジュールを 確認させて ください。"
+      ],
+      "answer": 2,
+      "explanation": "A request to go instead; checking your schedule is the natural reply.",
+      "script": [
+        {
+          "speaker": "M",
+          "text": "来週の 出張、代わりに 行って もらえないかな。"
+        }
+      ]
+    },
+    {
+      "id": "n2-qr-011",
+      "type": "QUICK_RESPONSE",
+      "prompt": "",
+      "choices": [
+        "お先に どうぞ、失礼します。",
+        "はい、失礼しました。",
+        "お疲れさま。気を つけて。"
+      ],
+      "answer": 2,
+      "explanation": "Reply to someone leaving work first.",
+      "script": [
+        {
+          "speaker": "F",
+          "text": "課長、お先に 失礼します。"
+        }
+      ]
+    },
+    {
+      "id": "n2-qr-012",
+      "type": "QUICK_RESPONSE",
+      "prompt": "",
+      "choices": [
+        "はい、目を 通して いただきます。",
+        "はい、ご覧に なります。",
+        "はい、後ほど 拝見します。"
+      ],
+      "answer": 2,
+      "explanation": "拝見する is the humble form of 見る.",
+      "script": [
+        {
+          "speaker": "M",
+          "text": "この 資料、目を 通して おいて くれる？"
+        }
+      ]
+    },
+    {
+      "id": "n2-il-001",
+      "type": "INTEGRATED_LISTENING",
+      "prompt": "家族は どこへ 行く ことに しましたか。",
+      "choices": [
+        "北海道",
+        "沖縄",
+        "京都",
+        "近くの 温泉"
+      ],
+      "answer": 0,
+      "explanation": "Okinawa and Kyoto are too hot, the daughter wants the hot spring in winter, so they choose Hokkaido.",
+      "situation": "家族 三人が 旅行の 行き先に ついて 話して います。",
+      "script": [
+        {
+          "speaker": "M",
+          "text": "夏休みの 旅行、どこに しようか。候補は 北海道、沖縄、京都、それに 近くの 温泉だけど。"
+        },
+        {
+          "speaker": "F",
+          "text": "沖縄は 飛行機代が 高い 時期だし、暑いわよね。"
+        },
+        {
+          "speaker": "F2",
+          "text": "わたし、京都が いい。お寺を 見たいし。"
+        },
+        {
+          "speaker": "M",
+          "text": "京都も 夏は すごく 暑いよ。涼しい 所が いいなら 北海道だな。"
+        },
+        {
+          "speaker": "F",
+          "text": "北海道、いいわね。でも、ちょっと 遠いかしら。温泉なら 近いし、ゆっくりできるけど。"
+        },
+        {
+          "speaker": "F2",
+          "text": "温泉は 冬に 行きたいな。涼しくて、自然も 楽しめるなら 北海道が いい。"
+        },
+        {
+          "speaker": "M",
+          "text": "よし、じゃあ そう しよう。"
+        }
+      ]
+    },
+    {
+      "id": "n2-il-002",
+      "type": "INTEGRATED_LISTENING",
+      "prompt": "研修の 会場は どこに なりましたか。",
+      "choices": [
+        "A会議室",
+        "Bホール",
+        "本社の 食堂",
+        "研修センター"
+      ],
+      "answer": 3,
+      "explanation": "Room A is too small and Hall B's desks can't be moved, so the training center.",
+      "situation": "会社で 三人が 新人研修の 会場に ついて 話して います。",
+      "script": [
+        {
+          "speaker": "M",
+          "text": "来月の 新人研修の 会場、どこに しようか。A会議室、Bホール、それから 外の 研修センターが 候補だけど。"
+        },
+        {
+          "speaker": "F",
+          "text": "今年は 新人が 四十人でしょう。A会議室は 三十人までだから、無理ですね。"
+        },
+        {
+          "speaker": "M2",
+          "text": "Bホールは 広いけど、机が 動かせないから、グループワークには 向かないんですよね。"
+        },
+        {
+          "speaker": "F",
+          "text": "研修センターなら 机も 動かせるし、四十人でも 大丈夫です。ただ、少し 費用が かかります。"
+        },
+        {
+          "speaker": "M",
+          "text": "費用は 予算内だから 問題ない。グループワークが 中心だから、そこに しよう。"
+        }
+      ]
+    },
+    {
+      "id": "n2-il-003",
+      "type": "INTEGRATED_LISTENING",
+      "prompt": "質問１：女の人は どの 講座に 参加しますか。",
+      "choices": [
+        "料理講座",
+        "英会話講座",
+        "ヨガ講座",
+        "写真講座"
+      ],
+      "answer": 2,
+      "explanation": "She wants to move her body because she lacks exercise: the yoga course.",
+      "situation": "ラジオで 市民講座の 紹介を 聞いた あとで、男の人と 女の人が 話して います。",
+      "script": [
+        {
+          "speaker": "N",
+          "text": "市の 文化センターでは、来月から 四つの 講座が 始まります。一つ目は 写真講座。スマートフォンで きれいな 写真を 撮る コツを 学びます。二つ目は 料理講座。地元の 野菜を 使った 家庭料理を 作ります。三つ目は 英会話講座。旅行で 使える 簡単な 英会話を 練習します。四つ目は ヨガ講座。初心者向けで、体の 硬い 方でも 安心して 参加できます。"
+        },
+        {
+          "speaker": "F",
+          "text": "どれか 一緒に 行かない？わたし、最近 運動不足だから、体を 動かすのが いいな。"
+        },
+        {
+          "speaker": "M",
+          "text": "僕は 来年 海外旅行に 行くから、あれが いいかな。"
+        },
+        {
+          "speaker": "F",
+          "text": "あ、そうか。じゃあ 別々に なっちゃうね。でも、終わった あとで 一緒に お茶でも しよう。"
+        }
+      ]
+    },
+    {
+      "id": "n2-il-004",
+      "type": "INTEGRATED_LISTENING",
+      "prompt": "質問２：男の人は どの 講座に 参加しますか。",
+      "choices": [
+        "ヨガ講座",
+        "英会話講座",
+        "写真講座",
+        "料理講座"
+      ],
+      "answer": 1,
+      "explanation": "He is traveling abroad next year: the English conversation course.",
+      "situation": "ラジオで 市民講座の 紹介を 聞いた あとで、男の人と 女の人が 話して います。",
+      "script": [
+        {
+          "speaker": "N",
+          "text": "市の 文化センターでは、来月から 四つの 講座が 始まります。一つ目は 写真講座。スマートフォンで きれいな 写真を 撮る コツを 学びます。二つ目は 料理講座。地元の 野菜を 使った 家庭料理を 作ります。三つ目は 英会話講座。旅行で 使える 簡単な 英会話を 練習します。四つ目は ヨガ講座。初心者向けで、体の 硬い 方でも 安心して 参加できます。"
+        },
+        {
+          "speaker": "F",
+          "text": "どれか 一緒に 行かない？わたし、最近 運動不足だから、体を 動かすのが いいな。"
+        },
+        {
+          "speaker": "M",
+          "text": "僕は 来年 海外旅行に 行くから、あれが いいかな。"
+        },
+        {
+          "speaker": "F",
+          "text": "あ、そうか。じゃあ 別々に なっちゃうね。でも、終わった あとで 一緒に お茶でも しよう。"
+        }
+      ]
+    }
+  ]
+}
