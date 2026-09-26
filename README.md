@@ -3,6 +3,14 @@
 An open-source Android app for JLPT practice, N5 to N1, in the spirit of apps like Migii JLPT.
 It works fully offline: every question ships inside the app.
 
+## Download
+
+Get the latest APK from the [Releases page](https://github.com/hoangkien1703/Open-JLPT/releases/latest)
+([direct link](https://github.com/hoangkien1703/Open-JLPT/releases/latest/download/open-jlpt.apk)).
+Open the file on your phone and allow installing apps from your browser when Android asks.
+Android 8.0 or newer is required. Every change merged into `main` publishes a new release, and a new
+APK installs over the old one without losing your history.
+
 ## Features
 
 - **All five levels.** Pick N5, N4, N3, N2 or N1 on the home screen; the app remembers your level.
@@ -40,7 +48,8 @@ Requirements: JDK 17 and the Android SDK (API 35).
 ./gradlew :app:assembleDebug  # builds app/build/outputs/apk/debug/app-debug.apk
 ```
 
-GitHub Actions runs both on every push and uploads the debug APK as a build artifact.
+GitHub Actions runs both on every push and uploads the debug APK as a build artifact. Pushes to
+`main` also build the release APK and publish it as a GitHub Release (`.github/workflows/release.yml`).
 
 ## Adding questions
 

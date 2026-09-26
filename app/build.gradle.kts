@@ -13,12 +13,26 @@ android {
         applicationId = "com.openjlpt.app"
         minSdk = 26
         targetSdk = 35
-        versionCode = 1
-        versionName = "0.1.0"
+        // CI passes the release number so each downloaded APK installs over the previous one.
+        versionCode = providers.environmentVariable("VERSION_CODE").orNull?.toInt() ?: 1
+        versionName = providers.environmentVariable("VERSION_NAME").orNull ?: "0.1.0"
+    }
+
+    signingConfigs {
+        // A shared, public key checked into the repo so every build (local or CI) has the same
+        // signature and updates install without uninstalling. It is not secret: use your own
+        // private key before publishing to Google Play.
+        getByName("debug") {
+            storeFile = file("debug.keystore")
+            storePassword = "android"
+            keyAlias = "androiddebugkey"
+            keyPassword = "android"
+        }
     }
 
     buildTypes {
         release {
+            signingConfig = signingConfigs.getByName("debug")
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }

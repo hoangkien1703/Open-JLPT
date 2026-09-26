@@ -26,8 +26,8 @@ jobs:
       - name: Test the engine and validate the question banks
         run: ./gradlew :core:test --stacktrace
 
-      - name: Build the debug APK
-        run: ./gradlew :app:assembleDebug :app:testDebugUnitTest --stacktrace
+      - name: Build the debug and release APKs
+        run: ./gradlew :app:assembleDebug :app:assembleRelease :app:testDebugUnitTest --stacktrace
 
       - name: Upload the APK
         uses: actions/upload-artifact@v4
