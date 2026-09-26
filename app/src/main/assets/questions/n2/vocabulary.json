@@ -1,0 +1,486 @@
+{
+  "level": "N2",
+  "questions": [
+    {
+      "id": "n2-kr-001",
+      "type": "KANJI_READING",
+      "prompt": "来年度から 新しい 制度が <u>導入</u>される。",
+      "choices": [
+        "どうにゅ",
+        "どうじゅう",
+        "どうにゅう",
+        "とうにゅう"
+      ],
+      "answer": 2,
+      "explanation": "導入 is read どうにゅう (introduction of a system)."
+    },
+    {
+      "id": "n2-kr-002",
+      "type": "KANJI_READING",
+      "prompt": "住民の 意見を <u>尊重</u>する。",
+      "choices": [
+        "そうちょう",
+        "そんちょう",
+        "そんじゅう",
+        "そんちょ"
+      ],
+      "answer": 1,
+      "explanation": "尊重 is read そんちょう (respect, value)."
+    },
+    {
+      "id": "n2-kr-003",
+      "type": "KANJI_READING",
+      "prompt": "事故の <u>詳細</u>は まだ わかって いない。",
+      "choices": [
+        "しょうさい",
+        "しょさい",
+        "しょうざい",
+        "そうさい"
+      ],
+      "answer": 0,
+      "explanation": "詳細 is read しょうさい (details)."
+    },
+    {
+      "id": "n2-kr-004",
+      "type": "KANJI_READING",
+      "prompt": "彼女は 感情を <u>抑えて</u> 話した。",
+      "choices": [
+        "かかえて",
+        "そろえて",
+        "ささえて",
+        "おさえて"
+      ],
+      "answer": 3,
+      "explanation": "抑える is read おさえる (to hold back)."
+    },
+    {
+      "id": "n2-kr-005",
+      "type": "KANJI_READING",
+      "prompt": "この 地域では 冬に 雪が <u>頻繁</u>に 降る。",
+      "choices": [
+        "ひんばん",
+        "ひんぽん",
+        "ひんぱん",
+        "びんぱん"
+      ],
+      "answer": 2,
+      "explanation": "頻繁 is read ひんぱん (frequent)."
+    },
+    {
+      "id": "n2-kr-006",
+      "type": "KANJI_READING",
+      "prompt": "工事は <u>順調</u>に 進んで いる。",
+      "choices": [
+        "じゅうちょう",
+        "じゅんちょう",
+        "じゅんちょ",
+        "しゅんちょう"
+      ],
+      "answer": 1,
+      "explanation": "順調 is read じゅんちょう (going smoothly)."
+    },
+    {
+      "id": "n2-or-001",
+      "type": "ORTHOGRAPHY",
+      "prompt": "会社の <u>きぼ</u>を 拡大する。",
+      "choices": [
+        "既模",
+        "規膜",
+        "規模",
+        "規漠"
+      ],
+      "answer": 2,
+      "explanation": "きぼ (scale) is written 規模."
+    },
+    {
+      "id": "n2-or-002",
+      "type": "ORTHOGRAPHY",
+      "prompt": "来週までに 報告書を <u>ていしゅつ</u>して ください。",
+      "choices": [
+        "程出",
+        "提出",
+        "堤出",
+        "提術"
+      ],
+      "answer": 1,
+      "explanation": "ていしゅつ (submission) is written 提出. 堤 is つつみ (embankment)."
+    },
+    {
+      "id": "n2-or-003",
+      "type": "ORTHOGRAPHY",
+      "prompt": "両国の 関係が <u>あっか</u>した。",
+      "choices": [
+        "悪化",
+        "悪加",
+        "亜化",
+        "悪価"
+      ],
+      "answer": 0,
+      "explanation": "あっか (worsening) is written 悪化."
+    },
+    {
+      "id": "n2-or-004",
+      "type": "ORTHOGRAPHY",
+      "prompt": "彼は 失敗を <u>おそれず</u>に 挑戦した。",
+      "choices": [
+        "忍れず",
+        "怒れず",
+        "急れず",
+        "恐れず"
+      ],
+      "answer": 3,
+      "explanation": "おそれる (to fear) is written 恐れる."
+    },
+    {
+      "id": "n2-or-005",
+      "type": "ORTHOGRAPHY",
+      "prompt": "引っ越しの 荷物を トラックに <u>つんだ</u>。",
+      "choices": [
+        "責んだ",
+        "債んだ",
+        "積んだ",
+        "績んだ"
+      ],
+      "answer": 2,
+      "explanation": "つむ (to load) is written 積む. 績, 責 and 債 share a part but are different kanji."
+    },
+    {
+      "id": "n2-or-006",
+      "type": "ORTHOGRAPHY",
+      "prompt": "契約の 内容を <u>かくにん</u>する。",
+      "choices": [
+        "確任",
+        "確認",
+        "確忍",
+        "碓認"
+      ],
+      "answer": 1,
+      "explanation": "かくにん (confirmation) is written 確認."
+    },
+    {
+      "id": "n2-wf-001",
+      "type": "WORD_FORMATION",
+      "prompt": "最近の 若者は 政治に （　　）関心だと 言われる。",
+      "choices": [
+        "非",
+        "未",
+        "無",
+        "不"
+      ],
+      "answer": 2,
+      "explanation": "無関心 means indifferent. 無 attaches to 関心."
+    },
+    {
+      "id": "n2-wf-002",
+      "type": "WORD_FORMATION",
+      "prompt": "この 映画は 大人（　　）けの 作品だ。",
+      "choices": [
+        "性",
+        "向",
+        "型",
+        "流"
+      ],
+      "answer": 1,
+      "explanation": "〜向け means aimed at: 大人向け (for adults)."
+    },
+    {
+      "id": "n2-wf-003",
+      "type": "WORD_FORMATION",
+      "prompt": "彼の 説明には 説得（　　）が ある。",
+      "choices": [
+        "力",
+        "性",
+        "感",
+        "化"
+      ],
+      "answer": 0,
+      "explanation": "説得力 means persuasiveness."
+    },
+    {
+      "id": "n2-wf-004",
+      "type": "WORD_FORMATION",
+      "prompt": "（　　）段階では、まだ 何も 決まって いない。",
+      "choices": [
+        "今",
+        "前",
+        "近",
+        "現"
+      ],
+      "answer": 3,
+      "explanation": "現段階 means the present stage."
+    },
+    {
+      "id": "n2-wf-005",
+      "type": "WORD_FORMATION",
+      "prompt": "製品の 安全（　　）を 高める ために 検査を 増やした。",
+      "choices": [
+        "力",
+        "的",
+        "性",
+        "化"
+      ],
+      "answer": 2,
+      "explanation": "安全性 means safety (as a quality)."
+    },
+    {
+      "id": "n2-cx-001",
+      "type": "CONTEXT",
+      "prompt": "彼は 会議で 自分の 意見を （　　） 述べた。",
+      "choices": [
+        "はっきり",
+        "ぐっすり",
+        "のんびり",
+        "うっかり"
+      ],
+      "answer": 0,
+      "explanation": "はっきり 述べる means to state clearly."
+    },
+    {
+      "id": "n2-cx-002",
+      "type": "CONTEXT",
+      "prompt": "新しい 商品の 売り上げは 予想を 大きく （　　）。",
+      "choices": [
+        "上がった",
+        "高まった",
+        "上げた",
+        "上回った"
+      ],
+      "answer": 3,
+      "explanation": "予想を 上回る means to exceed expectations. 上がる and 高まる can't take を."
+    },
+    {
+      "id": "n2-cx-003",
+      "type": "CONTEXT",
+      "prompt": "雨で 試合が 中止に なり、選手たちは （　　） 帰って いった。",
+      "choices": [
+        "すっきりして",
+        "うっとりして",
+        "がっかりして",
+        "にっこりして"
+      ],
+      "answer": 2,
+      "explanation": "がっかりする means to be disappointed."
+    },
+    {
+      "id": "n2-cx-004",
+      "type": "CONTEXT",
+      "prompt": "部長は 忙しくて、なかなか 相談する （　　）が ない。",
+      "choices": [
+        "基準",
+        "機会",
+        "機械",
+        "期間"
+      ],
+      "answer": 1,
+      "explanation": "機会 means opportunity. 機械 (the same reading) means machine."
+    },
+    {
+      "id": "n2-cx-005",
+      "type": "CONTEXT",
+      "prompt": "田中さんは 経験が 豊富なので、この 仕事に （　　）だ。",
+      "choices": [
+        "ぴったり",
+        "ぎりぎり",
+        "ばったり",
+        "うんざり"
+      ],
+      "answer": 0,
+      "explanation": "ぴったり means perfectly suited."
+    },
+    {
+      "id": "n2-cx-006",
+      "type": "CONTEXT",
+      "prompt": "この 薬には 眠く なる （　　）が ある。",
+      "choices": [
+        "反作用",
+        "相互",
+        "効率",
+        "副作用"
+      ],
+      "answer": 3,
+      "explanation": "副作用 means side effect."
+    },
+    {
+      "id": "n2-cx-007",
+      "type": "CONTEXT",
+      "prompt": "地震に （　　）、水や 食料を 準備して おく。",
+      "choices": [
+        "整えて",
+        "揃えて",
+        "備えて",
+        "構えて"
+      ],
+      "answer": 2,
+      "explanation": "〜に 備える means to prepare for something."
+    },
+    {
+      "id": "n2-cx-008",
+      "type": "CONTEXT",
+      "prompt": "彼女の 話は いつも 大げさなので、（　　） 信じない ほうが いい。",
+      "choices": [
+        "そのため",
+        "そのまま",
+        "そのうち",
+        "そのかわり"
+      ],
+      "answer": 1,
+      "explanation": "そのまま 信じる means to believe it as it is, at face value."
+    },
+    {
+      "id": "n2-pa-001",
+      "type": "PARAPHRASE",
+      "prompt": "彼の 話は <u>つじつまが 合わない</u>。",
+      "choices": [
+        "話が 長すぎる",
+        "話が 面白くない",
+        "話が よく 聞こえない",
+        "話の 筋が 通って いない"
+      ],
+      "answer": 3,
+      "explanation": "つじつまが 合わない means the story doesn't add up."
+    },
+    {
+      "id": "n2-pa-002",
+      "type": "PARAPHRASE",
+      "prompt": "新しい 店の 準備は <u>着々と</u> 進んで いる。",
+      "choices": [
+        "急いで",
+        "少しずつ 遅れて",
+        "順調に",
+        "ゆっくり"
+      ],
+      "answer": 2,
+      "explanation": "着々と means steadily, according to plan."
+    },
+    {
+      "id": "n2-pa-003",
+      "type": "PARAPHRASE",
+      "prompt": "彼女は 私の 言葉に <u>むっとした</u>。",
+      "choices": [
+        "喜んだ",
+        "怒った",
+        "驚いた",
+        "困った"
+      ],
+      "answer": 1,
+      "explanation": "むっとする means to be offended, to get annoyed."
+    },
+    {
+      "id": "n2-pa-004",
+      "type": "PARAPHRASE",
+      "prompt": "警察は 事故の 原因を <u>突き止めた</u>。",
+      "choices": [
+        "はっきり させた",
+        "調べ始めた",
+        "発表した",
+        "忘れて しまった"
+      ],
+      "answer": 0,
+      "explanation": "突き止める means to find out for certain."
+    },
+    {
+      "id": "n2-pa-005",
+      "type": "PARAPHRASE",
+      "prompt": "それは <u>ありふれた</u> 話だ。",
+      "choices": [
+        "珍しい",
+        "悲しい",
+        "古い",
+        "よく ある"
+      ],
+      "answer": 3,
+      "explanation": "ありふれた means commonplace."
+    },
+    {
+      "id": "n2-pa-006",
+      "type": "PARAPHRASE",
+      "prompt": "今日の 会議は <u>ひとまず</u> ここで 終わりに しよう。",
+      "choices": [
+        "急いで",
+        "最後まで",
+        "いったん",
+        "永久に"
+      ],
+      "answer": 2,
+      "explanation": "ひとまず means for the time being: いったん."
+    },
+    {
+      "id": "n2-us-001",
+      "type": "USAGE",
+      "prompt": "見合わせる",
+      "choices": [
+        "彼は 父親に よく 見合わせて いる。",
+        "大雨の ため、電車の 運転を 見合わせて いる。",
+        "久しぶりに 友人と 駅で 見合わせた。",
+        "旅行の お土産を 家族に 見合わせた。"
+      ],
+      "answer": 1,
+      "explanation": "見合わせる here means to suspend. The others need 待ち合わせた, 見せた and 似て."
+    },
+    {
+      "id": "n2-us-002",
+      "type": "USAGE",
+      "prompt": "手分け",
+      "choices": [
+        "三人で 手分けして 部屋を 掃除した。",
+        "ケーキを 四つに 手分けして 食べた。",
+        "彼は 手分けが 器用で、何でも 作れる。",
+        "父の 財産を 兄弟で 手分けした。"
+      ],
+      "answer": 0,
+      "explanation": "手分けする means to divide up work among people. The others need 分けて, 手先 and 分けた."
+    },
+    {
+      "id": "n2-us-003",
+      "type": "USAGE",
+      "prompt": "心当たり",
+      "choices": [
+        "彼の 心当たりの ある 言葉に 感動した。",
+        "試験の 前は 心当たりが 悪くて、眠れない。",
+        "母の 心当たりで 大学に 進学できた。",
+        "財布を なくしたが、どこで 落としたか 心当たりが ない。"
+      ],
+      "answer": 3,
+      "explanation": "心当たりが ない means to have no idea. The others need 心の こもった, 気分 and おかげ."
+    },
+    {
+      "id": "n2-us-004",
+      "type": "USAGE",
+      "prompt": "目覚ましい",
+      "choices": [
+        "部屋が 目覚ましくて 眠れない。",
+        "彼女は いつも 目覚ましい 声で 話す。",
+        "この 国の 経済は 目覚ましい 発展を とげた。",
+        "目覚ましい 時計が 鳴って 起きた。"
+      ],
+      "answer": 2,
+      "explanation": "目覚ましい means remarkable. The others need 目覚まし, まぶしくて and 大きい."
+    },
+    {
+      "id": "n2-us-005",
+      "type": "USAGE",
+      "prompt": "取り組む",
+      "choices": [
+        "新しい 服に 取り組んで 出かけた。",
+        "会社全体で 環境問題に 取り組んで いる。",
+        "棚の 上の 箱を 取り組んで ください。",
+        "友人と 駅前で 取り組んだ。"
+      ],
+      "answer": 1,
+      "explanation": "〜に 取り組む means to tackle a problem. The others need 取って, 待ち合わせた and 着替えて."
+    },
+    {
+      "id": "n2-us-006",
+      "type": "USAGE",
+      "prompt": "気が済む",
+      "choices": [
+        "彼は 納得するまで 調べないと 気が済まない 性格だ。",
+        "薬を 飲んだら 気が済んで、熱が 下がった。",
+        "彼の 冗談は 気が済んで いて 面白い。",
+        "夕方に なって 雨が 気が済んで、晴れて きた。"
+      ],
+      "answer": 0,
+      "explanation": "気が済まない means one can't rest until satisfied. The others need 楽に なって, 気が 利いて and 止んで."
+    }
+  ]
+}

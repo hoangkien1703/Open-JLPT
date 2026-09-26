@@ -18,7 +18,7 @@ class QuestionBankContentTest {
     private val root = File(System.getProperty("questionsDir") ?: "../app/src/main/assets/questions")
 
     /** Levels whose banks must hold enough questions for a full mock test. */
-    private val completeLevels = setOf(JlptLevel.N5, JlptLevel.N4, JlptLevel.N3)
+    private val completeLevels = setOf(JlptLevel.N5, JlptLevel.N4, JlptLevel.N3, JlptLevel.N2)
 
     private val banks: Map<JlptLevel, QuestionBank> by lazy {
         JlptLevel.entries.mapNotNull { level ->
